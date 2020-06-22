@@ -1,0 +1,234 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue原理</title>
+</head>
+<body>
+<div>
+  <pre>
+  Vue的基本特性是双向绑定，把模板字符串编译成DOM树，设置好每个数据的get和set。
+  打开控制台，设置vue.name='one',vue.age=18试一下吧
+  </pre>
+</div>
+<hr>
+<div id="app">
+  <div>我的名字叫{{name}}</div>
+  <div>我的年龄是{{age}}</div>
+  <div>十年之后，我的年龄{{tenYears}}</div>
+  <div>二十年之后，我的年龄{{twentyYears}}</div>
+  <div>{{description}}</div>
+  <div>名字改变了{{nameChangeTimes}}次了</div>
+</div>
+</body>
+<script>
+  function goodMap() {
+    //一个好用的map，用来存放键值对，使用此函数封装一层是为了避免冗余的判断
+    return {
+      data: {},
+      get(attr) {
+        if (!this.data[attr]) {
+          return [];
+        }
+        return this.data[attr]
+      },
+      push(attr, f) {
+        const a = this.get(attr);
+        a.push(f);
+        this.data[attr] = a;
+      }
+    }
+  }
+
+  function buildGraph(data, computed, methods) {
+    //寻找computed中的依赖，构建DAG并简化DAG，因为computed中可能会用到methods，所以必须把methods传递过来
+    //构图阶段
+    const g = {};
+    let q = [];//访问到的属性列表
+    for (let i of Object.keys(methods)) {
+      g[i] = methods[i];
+    }
+    const allKeys = [];
+    for (let part of [data, computed]) {
+      for (let attr of Object.keys(part)) {
+        allKeys.push(attr);
+      }
+    }
+    for (let attr of allKeys) {
+      Object.defineProperty(g, attr, {
+        get() {
+          q.push(attr);
+        },
+        set(value) {
+          throw new Error("dont call this");
+        },
+        enumerable: true,
+        configurable: true,
+      })
+    }
+    const map = goodMap();
+    for (let attr of Object.keys(computed)) {
+      q = [];//清空列表
+      computed[attr].call(g);
+      for (let dependency of q) {
+        //attr depend on dependency
+        map.push(attr, dependency);
+      }
+    }
+    //拓扑图排序，求每个data属性的子孙
+    const depCount = {};//depCount[i]表示依赖i的个数
+    for (let i of allKeys) depCount[i] = 0;
+    for (let i in map.data) {
+      for (let j of map.data[i]) {
+        depCount[j] += 1;
+      }
+    }
+    const nodeQ = [];
+    for (let i in depCount) {
+      if (depCount[i] === 0) {
+        nodeQ.push(i);
+      }
+    }
+    const ifChange = {};
+    while (nodeQ.length) {
+      const now = nodeQ.pop();
+      for (let nowDep of map.get(now)) {
+        depCount[nowDep]--;
+        if (depCount[nowDep] <= 0) {
+          nodeQ.push(nowDep);
+        }
+        if (!ifChange[nowDep]) {
+          ifChange[nowDep] = new Set();
+        }
+        //把now的依赖列表赋给nowDep
+        (ifChange[now] || new Set()).forEach(item => ifChange[nowDep].add(item));
+        ifChange[nowDep].add(now);
+      }
+    }
+    for (let i of Object.values(depCount)) {
+      if (i > 0) {
+        throw new Error("存在环");
+      }
+    }
+    //给map进行瘦身，只返回data影响的computed
+    const dataMap = {};
+    for (let i of Object.keys(data)) {
+      if (ifChange[i]) {
+        dataMap[i] = Array.from(ifChange[i]);
+      }
+    }
+    return dataMap;
+  }
+
+  const vue = {
+    $el: "#app",
+    data: {
+      name: "weiyinfu",
+      age: 18,
+      nameChangeTimes: 0,//名字改变的次数
+    },
+    computed: {
+      description() {
+        return `大家好，我叫${this.name}，今年${this.age}岁了`;
+      },
+      tenYears() {
+        //测试computed中依赖函数
+        return this.getTenYearsLater()
+      },
+      twentyYears() {
+        //测试computed属性的互相依赖
+        return this.tenYears + 10;
+      }
+    },
+    watches: {
+      name() {
+        this.nameChangeTimes += 1;
+      }
+    },
+    methods: {
+      getTenYearsLater() {
+        return this.age + 10;
+      }
+    },
+    $map: goodMap(),
+    $callAttr(attr) {
+      //attr发生改变，调用一系列函数
+      for (let callback of this.$map.get(attr)) {
+        callback();
+      }
+    },
+    $bind() {
+      //把方法绑定到this
+      for (let methodName of Object.keys(this.methods)) {
+        this[methodName] = this.methods[methodName];
+      }
+      for (let attr in this.data) {
+        if (this[attr]) {
+          //如果Vue已经有了，那么不能再设置了
+          throw new Error("与已有属性冲突")
+        }
+        Object.defineProperty(this, attr, {
+          get() {
+            return this.data[attr];
+          },
+          set(value) {
+            this.data[attr] = value;
+            this.$callAttr(attr);
+          },
+          enumerable: true,
+          configurable: true,
+        })
+      }
+
+      for (let attr in this.computed) {
+        //如何处理依赖？，运行一次函数，判断有哪些属性发生改变了
+        Object.defineProperty(this, attr, {
+          get() {
+            return this.computed[attr].call(this);
+          },
+          set(value) {
+            throw new Error("无法给computed赋值")
+          },
+          enumerable: true,
+          configurable: true,
+        })
+      }
+      const computedDependency = buildGraph(this.data, this.computed, this.methods);
+      for (let dataAttr in computedDependency) {
+        for (let computedAttr of computedDependency[dataAttr]) {
+          this.$map.push(dataAttr, () => {
+            this.$callAttr(computedAttr)
+          })
+        }
+      }
+      for (let attr in this.watches) {
+        this.$map.push(attr, () => {
+          this.watches[attr].call(this);
+        })
+      }
+    },
+    $init() {
+      for (let attr in this.$map.data) {
+        this.$callAttr(attr);
+      }
+    },
+    $compile() {
+      //编译，解析模板，把html中的字符串绑定到$map中
+      const divs = document.querySelector(this.$el).querySelectorAll("div")
+      for (let div of divs) {
+        const template = div.innerText;
+        if (/{{\w*}}/.test(template)) {
+          const res = /{{(\w+)}}/.exec(template);
+          const attr = res[1];
+          this.$map.push(attr, () => {
+            div.innerText = template.replace(/{{\w*}}/g, this[attr]);
+          })
+        }
+      }
+    }
+  };
+
+  vue.$bind();
+  vue.$compile();
+  vue.$init();
+</script>
+</html>

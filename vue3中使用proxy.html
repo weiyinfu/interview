@@ -1,0 +1,68 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>vue3使用proxy</title>
+</head>
+<body></body>
+<script>
+  const myObj = {
+    _id: '我是myObj的ID',
+    name: 'mvvm',
+    age: 25
+  }
+
+  const myProxy = new Proxy(myObj, {
+    get(target, propKey, proxy) {
+      if (propKey === 'age') {
+        console.log('年龄很私密，禁止访问');
+        return '*';
+      }
+      return target[propKey];
+    },
+    set(target, propKey, value, proxy) {
+      /*
+      * target是myobj，propKey是属性，value是值，receiver是myProxy这个对象
+      * */
+      if (propKey === '_id') {
+        console.log('id无权修改');
+        return;
+      }
+      target[propKey] = value + (receiver.time || '');
+    },
+    // setPrototypeOf(target, proto) {},
+    // apply(target, object, args) {},
+    // construct(target, args) {},
+    // defineProperty(target, propKey, propDesc) {},
+    // deleteProperty(target, propKey) {},
+    // has(target, propKey) {},
+    // ownKeys(target) {},
+    // isExtensible(target) {},
+    // preventExtensions(target) {},
+    // getOwnPropertyDescriptor(target, propKey) {},
+    // getPrototypeOf(target) {},
+  });
+
+  myProxy._id = 34;
+  console.log(`age is: ${myProxy.age}`);
+
+  myProxy.name = 'my name is Proxy';
+  console.log(myProxy);
+
+  const newObj = {
+    time: ` [${new Date()}]`,
+  };
+  // 原对象原型链赋值
+  Object.setPrototypeOf(myProxy, newObj);
+  myProxy.name = 'my name is newObj';
+
+  console.log(myProxy.name);
+
+  /**
+   * id无权修改
+   * 年龄很私密，禁止访问
+   * age is: *
+   * { _id: '我是myObj的ID', name: 'my name is Proxy', age: 25 }
+   * my name is newObj [Thu Mar 19 2020 18:33:22 GMT+0800 (GMT+08:00)]
+   */
+</script>
+</html>

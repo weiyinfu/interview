@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div>
+  name: <input id="name"/>
+  age: <input id="age"/>
+</div>
+</body>
+<script>
+  // 与页面绑定
+  const data = {
+    name: '',
+    age: 0
+  }
+
+  // 暴露到外部，便于查看效果
+  window.data = data;
+  window.myProxy = new Proxy(data, {
+    set(target, propKey, value) {
+      // 改变数据Model时修改页面
+      if (propKey === 'name') {
+        document.getElementById('name').value = value;
+      } else if (propKey === 'age') {
+        document.getElementById('age').value = value;
+      }
+      Reflect.set(...arguments);
+    },
+  });
+
+  // 页面变化改变Model内数据
+  document.getElementById('name').onchange = function (e) {
+    Reflect.set(data, 'name', e.target.value);
+  }
+  document.getElementById('age').onchange = function (e) {
+    Reflect.set(data, 'age', e.target.value);
+  }
+
+</script>
+</html>
