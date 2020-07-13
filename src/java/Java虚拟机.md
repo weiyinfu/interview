@@ -46,7 +46,7 @@
 
 可以通过 -Xss 这个虚拟机参数来指定每个线程的 Java 虚拟机栈内存大小，在 JDK 1.4 中默认为 256K，而在 JDK 1.5+ 默认为 1M：
 
-```java
+```plain
 java -Xss2M HackTheJava
 ```
 
@@ -76,7 +76,7 @@ java -Xss2M HackTheJava
 
 可以通过 -Xms 和 -Xmx 这两个虚拟机参数来指定一个程序的堆内存大小，第一个参数设置初始值，第二个参数设置最大值。
 
-```java
+```plain
 java -Xms1M -Xmx2M HackTheJava
 ```
 
@@ -759,4 +759,4 @@ public class FileSystemClassLoader extends ClassLoader {
 
 
 
-<div align="center"><img width="320px" src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/公众号二维码-2.png"></img></div>
+   

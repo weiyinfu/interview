@@ -410,6 +410,17 @@ MySQL 提供了 FROM_UNIXTIME() 函数把 UNIX 时间戳转换为日期，并提
 
 <div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/master-slave-proxy.png" width=""> </div><br>
 
+# innodb和myisam的区别
+1. innodb支持事物， myisam不支持事物
+2. innodb支持行级锁， myisam支持表级锁
+3. innodb支持MVC， myisam不支持
+4. innodb支持外键， myisam不支持
+5. innodb不支持全文索引，myisam支持
+
+# 乐观锁和悲观锁
+悲观锁：是真正意义上的锁，写之前禁止别人写。
+乐观锁：不加锁，通过版本号来记录修改的版本，在提交阶段再决定是否修改成功。效率较高，适用于写数据库较为低频的场景。  
+
 # 参考资料
 
 - BaronScbwartz, PeterZaitsev, VadimTkacbenko, 等. 高性能 MySQL[M]. 电子工业出版社, 2013.
@@ -429,4 +440,4 @@ MySQL 提供了 FROM_UNIXTIME() 函数把 UNIX 时间戳转换为日期，并提
 
 
 
-<div align="center"><img width="320px" src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/公众号二维码-2.png"></img></div>
+   

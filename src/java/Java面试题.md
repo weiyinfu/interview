@@ -277,3 +277,15 @@ JDK是Java开发工具箱，是程序员需要安装的工具集，它包括java
 * 很多人都说要慎用ThreadLocal, 谈谈你的理解，使用ThreadLocal需要注意些什么?
    docker
 
+
+
+# 学习Java要多读代码
+* JVM底层
+* Spring家族
+* ORM-Hibernate/Mybabit
+* 线程池/数据库连接池
+* 高可用接入：Netty
+
+# 关于String
+三个类：String、StringBuffer、StringBuilder。  
+StringBuffer支持并行。StringBuffer和StringBuilder都继承自抽象类AbstractStringBuilder

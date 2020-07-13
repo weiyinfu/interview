@@ -54,12 +54,13 @@
 
 - TreeMap：基于红黑树实现。
 
-- HashMap：基于哈希表实现。
+- HashMap：基于哈希表实现。JDK1.8 中，当同一个hash值（ Table 上元素）的链表节点数不小于8时，将不再以单链表的形式存储了，会被调整成一颗红黑树。这就是 JDK7 与 JDK8 中 HashMap 实现的最大区别。
 
 - HashTable：和 HashMap 类似，但它是线程安全的，这意味着同一时刻多个线程同时写入 HashTable 不会导致数据不一致。它是遗留类，不应该去使用它，而是使用 ConcurrentHashMap 来支持线程安全，ConcurrentHashMap 的效率会更高，因为 ConcurrentHashMap 引入了分段锁。
 
 - LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序。
 
+- ConcurrentHashMap:基于分段锁的高并发集合。
 
 # 二、容器中的设计模式
 
@@ -1135,4 +1136,4 @@ public final class ConcurrentCache<K, V> {
 
 
 
-<div align="center"><img width="320px" src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/githubio/公众号二维码-2.png"></img></div>
+   
