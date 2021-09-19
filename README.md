@@ -1,5 +1,5 @@
 # 面试题整理
-本Repo使用mdbook构建，使用`mdbook serve`命令打开浏览器进行浏览。  
+本Repo使用mdbook构建，使用`mdbook serve`命令打开浏览器进行浏览。  （这里怎么安装rust，小白不会啊，有没有简单傻瓜版的^_^）
 
 
 # 参考资料
