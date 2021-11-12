@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>设计模式-单例.md - 面试</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">1.</strong> C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../C++/C++面试题.html"><strong aria-hidden="true">1.1.</strong> C++面试题.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">2.</strong> 系统设计</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../系统设计/短链接服务.html"><strong aria-hidden="true">2.1.</strong> 短链接服务.md</a></li><li class="chapter-item expanded "><a href="../系统设计/系统设计基础.html"><strong aria-hidden="true">2.2.</strong> 系统设计基础.md</a></li><li class="chapter-item expanded "><a href="../系统设计/工程设计.html"><strong aria-hidden="true">2.3.</strong> 工程设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/两个文件URL去重.html"><strong aria-hidden="true">2.4.</strong> 两个文件URL去重.md</a></li><li class="chapter-item expanded "><a href="../系统设计/关注关系设计.html"><strong aria-hidden="true">2.5.</strong> 关注关系设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/秒杀系统.html"><strong aria-hidden="true">2.6.</strong> 秒杀系统.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">3.</strong> 操作系统</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-死锁.html"><strong aria-hidden="true">3.1.</strong> 计算机操作系统-死锁.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-概述.html"><strong aria-hidden="true">3.2.</strong> 计算机操作系统-概述.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-内存管理.html"><strong aria-hidden="true">3.3.</strong> 计算机操作系统-内存管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/Linux.html"><strong aria-hidden="true">3.4.</strong> Linux.md</a></li><li class="chapter-item expanded "><a href="../操作系统/进程与线程通信方式.html"><strong aria-hidden="true">3.5.</strong> 进程与线程通信方式.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-链接.html"><strong aria-hidden="true">3.6.</strong> 计算机操作系统-链接.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-设备管理.html"><strong aria-hidden="true">3.7.</strong> 计算机操作系统-设备管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-进程管理.html"><strong aria-hidden="true">3.8.</strong> 计算机操作系统-进程管理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">4.</strong> 算法</a></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../redis/Redis.html"><strong aria-hidden="true">5.1.</strong> Redis.md</a></li><li class="chapter-item expanded "><a href="../redis/Redis21问.html"><strong aria-hidden="true">5.2.</strong> Redis21问.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">6.</strong> 网络安全</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../网络安全/攻击技术.html"><strong aria-hidden="true">6.1.</strong> 攻击技术.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">7.</strong> 数据库</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../数据库/分库分表.html"><strong aria-hidden="true">7.1.</strong> 分库分表.md</a></li><li class="chapter-item expanded "><a href="../数据库/MySQL.html"><strong aria-hidden="true">7.2.</strong> MySQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/SQL.html"><strong aria-hidden="true">7.3.</strong> SQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/缓存.html"><strong aria-hidden="true">7.4.</strong> 缓存.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库系统原理.html"><strong aria-hidden="true">7.5.</strong> 数据库系统原理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">8.</strong> java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/JavaIO.html"><strong aria-hidden="true">8.1.</strong> JavaIO.md</a></li><li class="chapter-item expanded "><a href="../java/Java并发.html"><strong aria-hidden="true">8.2.</strong> Java并发.md</a></li><li class="chapter-item expanded "><a href="../java/Java面试题.html"><strong aria-hidden="true">8.3.</strong> Java面试题.md</a></li><li class="chapter-item expanded "><a href="../java/Java基础.html"><strong aria-hidden="true">8.4.</strong> Java基础.md</a></li><li class="chapter-item expanded "><a href="../java/Java容器.html"><strong aria-hidden="true">8.5.</strong> Java容器.md</a></li><li class="chapter-item expanded "><a href="../java/Java虚拟机.html"><strong aria-hidden="true">8.6.</strong> Java虚拟机.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">9.</strong> 计算机网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">9.1.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-网络层.html"><strong aria-hidden="true">9.2.</strong> 计算机网络-网络层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-应用层.html"><strong aria-hidden="true">9.3.</strong> 计算机网络-应用层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-概述.html"><strong aria-hidden="true">9.4.</strong> 计算机网络-概述.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/Socket.html"><strong aria-hidden="true">9.5.</strong> Socket.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP和UDP的区别.html"><strong aria-hidden="true">9.6.</strong> TCP和UDP的区别.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-物理层.html"><strong aria-hidden="true">9.7.</strong> 计算机网络-物理层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-链路层.html"><strong aria-hidden="true">9.8.</strong> 计算机网络-链路层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-传输层.html"><strong aria-hidden="true">9.9.</strong> 计算机网络-传输层.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">10.</strong> 常识</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../常识/微服务.html"><strong aria-hidden="true">10.1.</strong> 微服务.md</a></li><li class="chapter-item expanded "><a href="../常识/Python.html"><strong aria-hidden="true">10.2.</strong> Python.md</a></li><li class="chapter-item expanded "><a href="../常识/大数据.html"><strong aria-hidden="true">10.3.</strong> 大数据.md</a></li><li class="chapter-item expanded "><a href="../常识/正则表达式.html"><strong aria-hidden="true">10.4.</strong> 正则表达式.md</a></li><li class="chapter-item expanded "><a href="../常识/构建工具.html"><strong aria-hidden="true">10.5.</strong> 构建工具.md</a></li><li class="chapter-item expanded "><a href="../常识/面向对象思想.html"><strong aria-hidden="true">10.6.</strong> 面向对象思想.md</a></li><li class="chapter-item expanded "><a href="../常识/分布式.html"><strong aria-hidden="true">10.7.</strong> 分布式.md</a></li><li class="chapter-item expanded "><a href="../常识/结集.html"><strong aria-hidden="true">10.8.</strong> 结集.md</a></li><li class="chapter-item expanded "><a href="../常识/代码风格规范.html"><strong aria-hidden="true">10.9.</strong> 代码风格规范.md</a></li><li class="chapter-item expanded "><a href="../常识/简历的重要性.html"><strong aria-hidden="true">10.10.</strong> 简历的重要性.md</a></li><li class="chapter-item expanded "><a href="../常识/消息队列.html"><strong aria-hidden="true">10.11.</strong> 消息队列.md</a></li><li class="chapter-item expanded "><a href="../常识/腾讯面试合集.html"><strong aria-hidden="true">10.12.</strong> 腾讯面试合集.md</a></li><li class="chapter-item expanded "><a href="../常识/常用组件.html"><strong aria-hidden="true">10.13.</strong> 常用组件.md</a></li><li class="chapter-item expanded "><a href="../常识/数据结构与算法.html"><strong aria-hidden="true">10.14.</strong> 数据结构与算法.md</a></li><li class="chapter-item expanded "><a href="../常识/计算机基础.html"><strong aria-hidden="true">10.15.</strong> 计算机基础.md</a></li><li class="chapter-item expanded "><a href="../常识/Git.html"><strong aria-hidden="true">10.16.</strong> Git.md</a></li><li class="chapter-item expanded "><a href="../常识/代码可读性.html"><strong aria-hidden="true">10.17.</strong> 代码可读性.md</a></li><li class="chapter-item expanded "><a href="../常识/Docker.html"><strong aria-hidden="true">10.18.</strong> Docker.md</a></li><li class="chapter-item expanded "><a href="../常识/阿里面试题合集.html"><strong aria-hidden="true">10.19.</strong> 阿里面试题合集.md</a></li><li class="chapter-item expanded "><a href="../常识/集群.html"><strong aria-hidden="true">10.20.</strong> 集群.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">11.</strong> 设计模式</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../设计模式/设计模式-简单工厂.html"><strong aria-hidden="true">11.1.</strong> 设计模式-简单工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-代理.html"><strong aria-hidden="true">11.2.</strong> 设计模式-代理.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-外观.html"><strong aria-hidden="true">11.3.</strong> 设计模式-外观.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式.html"><strong aria-hidden="true">11.4.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-观察者.html"><strong aria-hidden="true">11.5.</strong> 设计模式-观察者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-装饰.html"><strong aria-hidden="true">11.6.</strong> 设计模式-装饰.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-迭代器.html"><strong aria-hidden="true">11.7.</strong> 设计模式-迭代器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-组合.html"><strong aria-hidden="true">11.8.</strong> 设计模式-组合.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-状态.html"><strong aria-hidden="true">11.9.</strong> 设计模式-状态.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-单例.html" class="active"><strong aria-hidden="true">11.10.</strong> 设计模式-单例.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-抽象工厂.html"><strong aria-hidden="true">11.11.</strong> 设计模式-抽象工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-生成器.html"><strong aria-hidden="true">11.12.</strong> 设计模式-生成器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-策略.html"><strong aria-hidden="true">11.13.</strong> 设计模式-策略.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-命令.html"><strong aria-hidden="true">11.14.</strong> 设计模式-命令.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-桥接.html"><strong aria-hidden="true">11.15.</strong> 设计模式-桥接.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-工厂方法.html"><strong aria-hidden="true">11.16.</strong> 设计模式-工厂方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-中介者.html"><strong aria-hidden="true">11.17.</strong> 设计模式-中介者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-访问者.html"><strong aria-hidden="true">11.18.</strong> 设计模式-访问者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-空对象.html"><strong aria-hidden="true">11.19.</strong> 设计模式-空对象.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-备忘录.html"><strong aria-hidden="true">11.20.</strong> 设计模式-备忘录.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-模板方法.html"><strong aria-hidden="true">11.21.</strong> 设计模式-模板方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-适配器.html"><strong aria-hidden="true">11.22.</strong> 设计模式-适配器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-责任链.html"><strong aria-hidden="true">11.23.</strong> 设计模式-责任链.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-享元.html"><strong aria-hidden="true">11.24.</strong> 设计模式-享元.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-原型模式.html"><strong aria-hidden="true">11.25.</strong> 设计模式-原型模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-解释器.html"><strong aria-hidden="true">11.26.</strong> 设计模式-解释器.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">12.</strong> 前端</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../前端/前端.html"><strong aria-hidden="true">12.1.</strong> 前端.md</a></li><li class="chapter-item expanded "><a href="../前端/前端工程师210问.html"><strong aria-hidden="true">12.2.</strong> 前端工程师210问.md</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">面试</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2><a class="header" href="#单例singleton" id="单例singleton">单例（Singleton）</a></h2>
+<h3><a class="header" href="#intent" id="intent">Intent</a></h3>
+<p>确保一个类只有一个实例，并提供该实例的全局访问点。</p>
+<h3><a class="header" href="#class-diagram" id="class-diagram">Class Diagram</a></h3>
+<p>使用一个私有构造函数、一个私有静态变量以及一个公有静态函数来实现。</p>
+<p>私有构造函数保证了不能通过构造函数来创建对象实例，只能通过公有静态函数返回唯一的私有静态变量。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/eca1f422-8381-409b-ad04-98ef39ae38ba.png"/> </div><br>
+<h3><a class="header" href="#implementation" id="implementation">Implementation</a></h3>
+<h4><a class="header" href="#Ⅰ-懒汉式-线程不安全" id="Ⅰ-懒汉式-线程不安全">Ⅰ 懒汉式-线程不安全</a></h4>
+<p>以下实现中，私有静态变量 uniqueInstance 被延迟实例化，这样做的好处是，如果没有用到该类，那么就不会实例化 uniqueInstance，从而节约资源。</p>
+<p>这个实现在多线程环境下是不安全的，如果多个线程能够同时进入 <code>if (uniqueInstance == null)</code> ，并且此时 uniqueInstance 为 null，那么会有多个线程执行 <code>uniqueInstance = new Singleton();</code> 语句，这将导致实例化多次 uniqueInstance。</p>
+<pre><code class="language-java">public class Singleton {
+
+    private static Singleton uniqueInstance;
+
+    private Singleton() {
+    }
+
+    public static Singleton getUniqueInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Singleton();
+        }
+        return uniqueInstance;
+    }
+}
+</code></pre>
+<h4><a class="header" href="#Ⅱ-饿汉式-线程安全" id="Ⅱ-饿汉式-线程安全">Ⅱ 饿汉式-线程安全</a></h4>
+<p>线程不安全问题主要是由于 uniqueInstance 被实例化多次，采取直接实例化 uniqueInstance 的方式就不会产生线程不安全问题。</p>
+<p>但是直接实例化的方式也丢失了延迟实例化带来的节约资源的好处。</p>
+<pre><code class="language-java">private static Singleton uniqueInstance = new Singleton();
+</code></pre>
+<h4><a class="header" href="#Ⅲ-懒汉式-线程安全" id="Ⅲ-懒汉式-线程安全">Ⅲ 懒汉式-线程安全</a></h4>
+<p>只需要对 getUniqueInstance() 方法加锁，那么在一个时间点只能有一个线程能够进入该方法，从而避免了实例化多次 uniqueInstance。</p>
+<p>但是当一个线程进入该方法之后，其它试图进入该方法的线程都必须等待，即使 uniqueInstance 已经被实例化了。这会让线程阻塞时间过长，因此该方法有性能问题，不推荐使用。</p>
+<pre><code class="language-java">public static synchronized Singleton getUniqueInstance() {
+    if (uniqueInstance == null) {
+        uniqueInstance = new Singleton();
+    }
+    return uniqueInstance;
+}
+</code></pre>
+<h4><a class="header" href="#Ⅳ-双重校验锁-线程安全" id="Ⅳ-双重校验锁-线程安全">Ⅳ 双重校验锁-线程安全</a></h4>
+<p>uniqueInstance 只需要被实例化一次，之后就可以直接使用了。加锁操作只需要对实例化那部分的代码进行，只有当 uniqueInstance 没有被实例化时，才需要进行加锁。</p>
+<p>双重校验锁先判断 uniqueInstance 是否已经被实例化，如果没有被实例化，那么才对实例化语句进行加锁。</p>
+<pre><code class="language-java">public class Singleton {
+
+    private volatile static Singleton uniqueInstance;
+
+    private Singleton() {
+    }
+
+    public static Singleton getUniqueInstance() {
+        if (uniqueInstance == null) {
+            synchronized (Singleton.class) {
+                if (uniqueInstance == null) {
+                    uniqueInstance = new Singleton();
+                }
+            }
+        }
+        return uniqueInstance;
+    }
+}
+</code></pre>
+<p>考虑下面的实现，也就是只使用了一个 if 语句。在 uniqueInstance == null 的情况下，如果两个线程都执行了 if 语句，那么两个线程都会进入 if 语句块内。虽然在 if 语句块内有加锁操作，但是两个线程都会执行 <code>uniqueInstance = new Singleton();</code> 这条语句，只是先后的问题，那么就会进行两次实例化。因此必须使用双重校验锁，也就是需要使用两个 if 语句：第一个 if 语句用来避免 uniqueInstance 已经被实例化之后的加锁操作，而第二个 if 语句进行了加锁，所以只能有一个线程进入，就不会出现 uniqueInstance == null 时两个线程同时进行实例化操作。</p>
+<pre><code class="language-java">if (uniqueInstance == null) {
+    synchronized (Singleton.class) {
+        uniqueInstance = new Singleton();
+    }
+}
+</code></pre>
+<p>uniqueInstance 采用 volatile 关键字修饰也是很有必要的， <code>uniqueInstance = new Singleton();</code> 这段代码其实是分为三步执行：</p>
+<ol>
+<li>为 uniqueInstance 分配内存空间</li>
+<li>初始化 uniqueInstance</li>
+<li>将 uniqueInstance 指向分配的内存地址</li>
+</ol>
+<p>但是由于 JVM 具有指令重排的特性，执行顺序有可能变成 1&gt;3&gt;2。指令重排在单线程环境下不会出现问题，但是在多线程环境下会导致一个线程获得还没有初始化的实例。例如，线程 T<sub>1</sub> 执行了 1 和 3，此时 T<sub>2</sub> 调用 getUniqueInstance() 后发现 uniqueInstance 不为空，因此返回 uniqueInstance，但此时 uniqueInstance 还未被初始化。</p>
+<p>使用 volatile 可以禁止 JVM 的指令重排，保证在多线程环境下也能正常运行。</p>
+<h4><a class="header" href="#Ⅴ-静态内部类实现" id="Ⅴ-静态内部类实现">Ⅴ 静态内部类实现</a></h4>
+<p>当 Singleton 类被加载时，静态内部类 SingletonHolder 没有被加载进内存。只有当调用 <code>getUniqueInstance()</code> 方法从而触发 <code>SingletonHolder.INSTANCE</code> 时 SingletonHolder 才会被加载，此时初始化 INSTANCE 实例，并且 JVM 能确保 INSTANCE 只被实例化一次。</p>
+<p>这种方式不仅具有延迟初始化的好处，而且由 JVM 提供了对线程安全的支持。</p>
+<pre><code class="language-java">public class Singleton {
+
+    private Singleton() {
+    }
+
+    private static class SingletonHolder {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+
+    public static Singleton getUniqueInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+}
+</code></pre>
+<h4><a class="header" href="#Ⅵ-枚举实现" id="Ⅵ-枚举实现">Ⅵ 枚举实现</a></h4>
+<pre><code class="language-java">public enum Singleton {
+
+    INSTANCE;
+
+    private String objName;
+
+
+    public String getObjName() {
+        return objName;
+    }
+
+
+    public void setObjName(String objName) {
+        this.objName = objName;
+    }
+
+
+    public static void main(String[] args) {
+
+        // 单例测试
+        Singleton firstSingleton = Singleton.INSTANCE;
+        firstSingleton.setObjName(&quot;firstName&quot;);
+        System.out.println(firstSingleton.getObjName());
+        Singleton secondSingleton = Singleton.INSTANCE;
+        secondSingleton.setObjName(&quot;secondName&quot;);
+        System.out.println(firstSingleton.getObjName());
+        System.out.println(secondSingleton.getObjName());
+
+        // 反射获取实例测试
+        try {
+            Singleton[] enumConstants = Singleton.class.getEnumConstants();
+            for (Singleton enumConstant : enumConstants) {
+                System.out.println(enumConstant.getObjName());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-html">firstName
+secondName
+secondName
+secondName
+</code></pre>
+<p>该实现可以防止反射攻击。在其它实现中，通过 setAccessible() 方法可以将私有构造函数的访问级别设置为 public，然后调用构造函数从而实例化对象，如果要防止这种攻击，需要在构造函数中添加防止多次实例化的代码。该实现是由 JVM 保证只会实例化一次，因此不会出现上述的反射攻击。</p>
+<p>该实现在多次序列化和序列化之后，不会得到多个实例。而其它实现需要使用 transient 修饰所有字段，并且实现序列化和反序列化的方法。</p>
+<h3><a class="header" href="#examples" id="examples">Examples</a></h3>
+<ul>
+<li>Logger Classes</li>
+<li>Configuration Classes</li>
+<li>Accesing resources in shared mode</li>
+<li>Factories implemented as Singletons</li>
+</ul>
+<h3><a class="header" href="#jdk" id="jdk">JDK</a></h3>
+<ul>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runtime.html#getRuntime%28%29">java.lang.Runtime#getRuntime()</a></li>
+<li><a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Desktop.html#getDesktop--">java.awt.Desktop#getDesktop()</a></li>
+<li>[java.lang.System#getSecurityManager()](</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../设计模式/设计模式-状态.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../设计模式/设计模式-抽象工厂.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../设计模式/设计模式-状态.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../设计模式/设计模式-抽象工厂.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

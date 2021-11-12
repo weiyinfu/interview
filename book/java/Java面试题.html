@@ -1,0 +1,539 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Java面试题.md - 面试</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">1.</strong> C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../C++/C++面试题.html"><strong aria-hidden="true">1.1.</strong> C++面试题.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">2.</strong> 系统设计</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../系统设计/短链接服务.html"><strong aria-hidden="true">2.1.</strong> 短链接服务.md</a></li><li class="chapter-item expanded "><a href="../系统设计/系统设计基础.html"><strong aria-hidden="true">2.2.</strong> 系统设计基础.md</a></li><li class="chapter-item expanded "><a href="../系统设计/工程设计.html"><strong aria-hidden="true">2.3.</strong> 工程设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/两个文件URL去重.html"><strong aria-hidden="true">2.4.</strong> 两个文件URL去重.md</a></li><li class="chapter-item expanded "><a href="../系统设计/关注关系设计.html"><strong aria-hidden="true">2.5.</strong> 关注关系设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/秒杀系统.html"><strong aria-hidden="true">2.6.</strong> 秒杀系统.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">3.</strong> 操作系统</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-死锁.html"><strong aria-hidden="true">3.1.</strong> 计算机操作系统-死锁.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-概述.html"><strong aria-hidden="true">3.2.</strong> 计算机操作系统-概述.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-内存管理.html"><strong aria-hidden="true">3.3.</strong> 计算机操作系统-内存管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/Linux.html"><strong aria-hidden="true">3.4.</strong> Linux.md</a></li><li class="chapter-item expanded "><a href="../操作系统/进程与线程通信方式.html"><strong aria-hidden="true">3.5.</strong> 进程与线程通信方式.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-链接.html"><strong aria-hidden="true">3.6.</strong> 计算机操作系统-链接.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-设备管理.html"><strong aria-hidden="true">3.7.</strong> 计算机操作系统-设备管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-进程管理.html"><strong aria-hidden="true">3.8.</strong> 计算机操作系统-进程管理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">4.</strong> 算法</a></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../redis/Redis.html"><strong aria-hidden="true">5.1.</strong> Redis.md</a></li><li class="chapter-item expanded "><a href="../redis/Redis21问.html"><strong aria-hidden="true">5.2.</strong> Redis21问.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">6.</strong> 网络安全</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../网络安全/攻击技术.html"><strong aria-hidden="true">6.1.</strong> 攻击技术.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">7.</strong> 数据库</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../数据库/分库分表.html"><strong aria-hidden="true">7.1.</strong> 分库分表.md</a></li><li class="chapter-item expanded "><a href="../数据库/MySQL.html"><strong aria-hidden="true">7.2.</strong> MySQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/SQL.html"><strong aria-hidden="true">7.3.</strong> SQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/缓存.html"><strong aria-hidden="true">7.4.</strong> 缓存.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库系统原理.html"><strong aria-hidden="true">7.5.</strong> 数据库系统原理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">8.</strong> java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/JavaIO.html"><strong aria-hidden="true">8.1.</strong> JavaIO.md</a></li><li class="chapter-item expanded "><a href="../java/Java并发.html"><strong aria-hidden="true">8.2.</strong> Java并发.md</a></li><li class="chapter-item expanded "><a href="../java/Java面试题.html" class="active"><strong aria-hidden="true">8.3.</strong> Java面试题.md</a></li><li class="chapter-item expanded "><a href="../java/Java基础.html"><strong aria-hidden="true">8.4.</strong> Java基础.md</a></li><li class="chapter-item expanded "><a href="../java/Java容器.html"><strong aria-hidden="true">8.5.</strong> Java容器.md</a></li><li class="chapter-item expanded "><a href="../java/Java虚拟机.html"><strong aria-hidden="true">8.6.</strong> Java虚拟机.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">9.</strong> 计算机网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">9.1.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-网络层.html"><strong aria-hidden="true">9.2.</strong> 计算机网络-网络层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-应用层.html"><strong aria-hidden="true">9.3.</strong> 计算机网络-应用层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-概述.html"><strong aria-hidden="true">9.4.</strong> 计算机网络-概述.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/Socket.html"><strong aria-hidden="true">9.5.</strong> Socket.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP和UDP的区别.html"><strong aria-hidden="true">9.6.</strong> TCP和UDP的区别.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-物理层.html"><strong aria-hidden="true">9.7.</strong> 计算机网络-物理层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-链路层.html"><strong aria-hidden="true">9.8.</strong> 计算机网络-链路层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-传输层.html"><strong aria-hidden="true">9.9.</strong> 计算机网络-传输层.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">10.</strong> 常识</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../常识/微服务.html"><strong aria-hidden="true">10.1.</strong> 微服务.md</a></li><li class="chapter-item expanded "><a href="../常识/Python.html"><strong aria-hidden="true">10.2.</strong> Python.md</a></li><li class="chapter-item expanded "><a href="../常识/大数据.html"><strong aria-hidden="true">10.3.</strong> 大数据.md</a></li><li class="chapter-item expanded "><a href="../常识/正则表达式.html"><strong aria-hidden="true">10.4.</strong> 正则表达式.md</a></li><li class="chapter-item expanded "><a href="../常识/构建工具.html"><strong aria-hidden="true">10.5.</strong> 构建工具.md</a></li><li class="chapter-item expanded "><a href="../常识/面向对象思想.html"><strong aria-hidden="true">10.6.</strong> 面向对象思想.md</a></li><li class="chapter-item expanded "><a href="../常识/分布式.html"><strong aria-hidden="true">10.7.</strong> 分布式.md</a></li><li class="chapter-item expanded "><a href="../常识/结集.html"><strong aria-hidden="true">10.8.</strong> 结集.md</a></li><li class="chapter-item expanded "><a href="../常识/代码风格规范.html"><strong aria-hidden="true">10.9.</strong> 代码风格规范.md</a></li><li class="chapter-item expanded "><a href="../常识/简历的重要性.html"><strong aria-hidden="true">10.10.</strong> 简历的重要性.md</a></li><li class="chapter-item expanded "><a href="../常识/消息队列.html"><strong aria-hidden="true">10.11.</strong> 消息队列.md</a></li><li class="chapter-item expanded "><a href="../常识/腾讯面试合集.html"><strong aria-hidden="true">10.12.</strong> 腾讯面试合集.md</a></li><li class="chapter-item expanded "><a href="../常识/常用组件.html"><strong aria-hidden="true">10.13.</strong> 常用组件.md</a></li><li class="chapter-item expanded "><a href="../常识/数据结构与算法.html"><strong aria-hidden="true">10.14.</strong> 数据结构与算法.md</a></li><li class="chapter-item expanded "><a href="../常识/计算机基础.html"><strong aria-hidden="true">10.15.</strong> 计算机基础.md</a></li><li class="chapter-item expanded "><a href="../常识/Git.html"><strong aria-hidden="true">10.16.</strong> Git.md</a></li><li class="chapter-item expanded "><a href="../常识/代码可读性.html"><strong aria-hidden="true">10.17.</strong> 代码可读性.md</a></li><li class="chapter-item expanded "><a href="../常识/Docker.html"><strong aria-hidden="true">10.18.</strong> Docker.md</a></li><li class="chapter-item expanded "><a href="../常识/阿里面试题合集.html"><strong aria-hidden="true">10.19.</strong> 阿里面试题合集.md</a></li><li class="chapter-item expanded "><a href="../常识/集群.html"><strong aria-hidden="true">10.20.</strong> 集群.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">11.</strong> 设计模式</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../设计模式/设计模式-简单工厂.html"><strong aria-hidden="true">11.1.</strong> 设计模式-简单工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-代理.html"><strong aria-hidden="true">11.2.</strong> 设计模式-代理.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-外观.html"><strong aria-hidden="true">11.3.</strong> 设计模式-外观.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式.html"><strong aria-hidden="true">11.4.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-观察者.html"><strong aria-hidden="true">11.5.</strong> 设计模式-观察者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-装饰.html"><strong aria-hidden="true">11.6.</strong> 设计模式-装饰.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-迭代器.html"><strong aria-hidden="true">11.7.</strong> 设计模式-迭代器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-组合.html"><strong aria-hidden="true">11.8.</strong> 设计模式-组合.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-状态.html"><strong aria-hidden="true">11.9.</strong> 设计模式-状态.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-单例.html"><strong aria-hidden="true">11.10.</strong> 设计模式-单例.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-抽象工厂.html"><strong aria-hidden="true">11.11.</strong> 设计模式-抽象工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-生成器.html"><strong aria-hidden="true">11.12.</strong> 设计模式-生成器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-策略.html"><strong aria-hidden="true">11.13.</strong> 设计模式-策略.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-命令.html"><strong aria-hidden="true">11.14.</strong> 设计模式-命令.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-桥接.html"><strong aria-hidden="true">11.15.</strong> 设计模式-桥接.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-工厂方法.html"><strong aria-hidden="true">11.16.</strong> 设计模式-工厂方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-中介者.html"><strong aria-hidden="true">11.17.</strong> 设计模式-中介者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-访问者.html"><strong aria-hidden="true">11.18.</strong> 设计模式-访问者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-空对象.html"><strong aria-hidden="true">11.19.</strong> 设计模式-空对象.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-备忘录.html"><strong aria-hidden="true">11.20.</strong> 设计模式-备忘录.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-模板方法.html"><strong aria-hidden="true">11.21.</strong> 设计模式-模板方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-适配器.html"><strong aria-hidden="true">11.22.</strong> 设计模式-适配器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-责任链.html"><strong aria-hidden="true">11.23.</strong> 设计模式-责任链.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-享元.html"><strong aria-hidden="true">11.24.</strong> 设计模式-享元.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-原型模式.html"><strong aria-hidden="true">11.25.</strong> 设计模式-原型模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-解释器.html"><strong aria-hidden="true">11.26.</strong> 设计模式-解释器.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">12.</strong> 前端</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../前端/前端.html"><strong aria-hidden="true">12.1.</strong> 前端.md</a></li><li class="chapter-item expanded "><a href="../前端/前端工程师210问.html"><strong aria-hidden="true">12.2.</strong> 前端工程师210问.md</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">面试</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><a href="https://zhuanlan.zhihu.com/p/105643505">问题链接</a></p>
+<h1><a class="header" href="#一java基础" id="一java基础">一、Java基础</a></h1>
+<ul>
+<li>解释下什么是面向对象？面向对象和面向过程的区别？
+最初的编程语言是面向过程的，主要元素是函数。面向对象是现代化编程语言的必备特性，面向对象的主要元素是类。面向对象提供了更高级的封装，使得代码可维护性更好；面向对象对世界的建模更合理，使得代码可读性更好。</li>
+<li>面向对象的三大特性？分别解释下？
+继承、封装、多态。</li>
+<li>JDK、JRE、JVM 三者之间的关系？
+JDK是Java开发工具箱，是程序员需要安装的工具集，它包括javac编译器，javac用于把java源代码编译成字节码。JRE是java运行时环境，用于运行字节码。JVM是java虚拟机，用于执行字节码。</li>
+<li>重载和重写的区别？
+重写是派生类重写父类函数，函数的参数完全相同。重载是函数名相同而参数类型不同。</li>
+<li>Java 中是否可以重写一个 private 或者 static 方法？</li>
+<li>构造器是否可以被重写？</li>
+<li>构造方法有哪些特性？</li>
+<li>在 Java 中定义一个不做事且没有参数的构造方法有什么作用？</li>
+<li>Java 中创建对象的几种方式？</li>
+<li>抽象类和接口有什么区别？</li>
+<li>静态变量和实例变量的区别？</li>
+<li>成员变量和局部变量的区别？</li>
+<li>short s1 = 1；s1 = s1 + 1；有什么错？那么 short s1 = 1; s1 += 1；呢？有没有错误？</li>
+<li>Integer 和 int 的区别？</li>
+<li>装箱和拆箱</li>
+<li>switch 语句能否作用在 byte 上，能否作用在 long 上，能否作用在 String 上？</li>
+<li>字节和字符的区别？</li>
+<li>String 为什么要设计为不可变类？</li>
+<li>String、StringBuilder、StringBuffer 的区别？</li>
+<li>String str = &quot;i&quot; 与 String str = new String(&quot;i&quot;) 一样吗？</li>
+<li>String 类的常用方法都有那些？</li>
+<li>final 修饰 StringBuffer 后还可以 append 吗？</li>
+<li>Object 的常用方法有哪些？</li>
+<li>为什么 wait/notify 方法放在 Object 类中而不是 Thread 类中？</li>
+<li>final、finally、finalize 的区别？</li>
+<li>finally 块中的代码什么时候被执行？finally 是不是一定会被执行到？</li>
+<li>try-catch-finally 中哪个部分可以省略？</li>
+<li>try-catch-finally 中，如果 catch 中 return 了，finally 还会执行吗？</li>
+<li>static 关键字的作用？</li>
+<li>super 关键字的作用？</li>
+<li>transient关键字的作用？</li>
+<li>== 和 equals 的区别？</li>
+<li>两个对象的 hashCode() 相同，则 equals() 也一定为 true 吗？</li>
+<li>为什么重写 equals() 就一定要重写 hashCode() 方法？</li>
+<li>&amp; 和 &amp;&amp; 的区别？</li>
+<li>Java 中的参数传递时传值呢？还是传引用？</li>
+<li>Java 中的 Math.round(-1.5) 等于多少？</li>
+<li>两个数的异或结果是什么？</li>
+<li>error 和 exception 的区别？</li>
+<li>throw 和 throws 的区别？</li>
+<li>常见的异常类有哪些？</li>
+<li>运行时异常与受检异常有何异同？</li>
+<li>主线程可以捕获到子线程的异常吗？</li>
+<li>Java 的泛型是如何工作的 ? 什么是类型擦除 ?</li>
+<li>什么是泛型中的限定通配符和非限定通配符 ?</li>
+<li>List&lt;? extends T&gt; 和 List &lt;? super T&gt; 之间有什么区别 ?</li>
+<li>如何实现对象的克隆？</li>
+<li>深克隆和浅克隆的区别？</li>
+<li>什么是 Java 的序列化，如何实现 Java 的序列化？</li>
+<li>Java 中的反射是什么意思？有哪些应用场景？</li>
+<li>反射的优缺点？</li>
+<li>Java 中的动态代理是什么？有哪些应用？</li>
+<li>怎么实现动态代理？</li>
+<li>Java 中的 IO 流的分类？说出几个你熟悉的实现类？</li>
+<li>字节流和字符流有什么区别？</li>
+<li>BIO、NIO、AIO 有什么区别？</li>
+</ul>
+<h1><a class="header" href="#二java集合类" id="二java集合类">二、Java集合类</a></h1>
+<ul>
+<li>Java 中常用的容器有哪些？</li>
+<li>ArrayList 和 LinkedList 的区别？</li>
+<li>ArrayList 的扩容机制？</li>
+<li>Array 和 ArrayList 有何区别？什么时候更适合用 Array？</li>
+<li>HashMap 的实现原理/底层数据结构？JDK1.7 和 JDK1.8</li>
+<li>HashMap 的 get、put、resize 方法的过程？</li>
+<li>HashMap 的 size 为什么必须是 2 的整数次方？</li>
+<li>HashMap 多线程死循环问题？</li>
+<li>HashMap 的 get 方法能否判断某个元素是否在 Map 中？</li>
+<li>HashMap 与 HashTable/ConcurrentHashMap 的区别是什么?</li>
+<li>HashTable 和 ConcurrentHashMap 的区别是什么?</li>
+<li>ConcurrentHashMap 的实现原理是什么？</li>
+<li>HashSet 的实现原理？怎么保证元素不重复的？</li>
+<li>LinkedHashMap 的实现原理?</li>
+<li>Iterator 怎么使用？有什么特点？</li>
+<li>Iterator 和 Enumeration 接口的区别？</li>
+<li>fail-fast 与 fail-safe 有什么区别？</li>
+<li>Collection 和 Collections 有什么区别？</li>
+</ul>
+<h1><a class="header" href="#四java虚拟机" id="四java虚拟机">四、Java虚拟机</a></h1>
+<ul>
+<li>说一下 Jvm 的主要组成部分？及其作用？</li>
+<li>谈谈对运行时数据区的理解？</li>
+<li>谈谈对堆和栈的理解？堆中存什么？栈中存什么？</li>
+<li>为什么要把堆和栈区分出来呢？栈中不是也可以存储数据吗？</li>
+<li>Java 中的参数传递时传值呢？还是传引用？</li>
+<li>Java 对象的大小是怎么计算的？</li>
+<li>对象的访问定位的两种方式？</li>
+<li>判断垃圾可以回收的方法有哪些？有什么优缺点？</li>
+<li>被标记为垃圾的对象一定会被回收吗？</li>
+<li>谈谈对 Java 中引用的了解？</li>
+<li>谈谈对内存泄漏的理解？举几个内存泄漏的案例？</li>
+<li>常用的垃圾收集算法有哪些？各自的优缺点是什么？</li>
+<li>为什么要采用分代收集算法？</li>
+<li>什么是浮动垃圾？</li>
+<li>常用的垃圾收集器有哪些？</li>
+<li>谈谈 CMS 和 G1 的区别？</li>
+<li>谈谈对 G1 收集器的理解？</li>
+<li>详细说下垃圾回收策略？</li>
+<li>谈谈你对内存分配的理解？大对象怎么分配？空间分配担保？</li>
+<li>说下你用过的 JVM 监控工具？</li>
+<li>谈谈你对 JVM 调优的理解？有过工程调优经验吗？</li>
+<li>JVM 设置最大堆的参数是什么？</li>
+<li>谈谈你对类文件结构的理解？有哪些部分组成？</li>
+<li>谈谈你对类加载机制的了解？</li>
+<li>类加载各阶段的作用分别是什么？</li>
+<li>有哪些类加载器？分别有什么作用？</li>
+<li>怎么实现一个自定义的类加载器？需要注意什么？</li>
+<li>谈谈你对双亲委派模型的理解？工作过程？为什么要使用？</li>
+<li>怎么打破双亲委派模型？有哪些实际场景是需要打破双亲委派模型的？</li>
+<li>谈谈你对编译期优化和运行期优化的理解？</li>
+<li>谈谈你对词法分析和语法分析的理解？</li>
+<li>为何 HotSpot 虚拟机要使用解释器与编译器并存的架构？</li>
+<li>编译优化技术有哪些？</li>
+<li>说下你对 Java 内存模型的理解？</li>
+<li>内存间的交互操作有哪些？需要满足什么规则？</li>
+<li>说一下jdk的对空间的内存划分是怎样的？</li>
+<li>GC的回收流程是怎样的？</li>
+<li>请解释StackOverflowError和OutOfMemeryError的区别？</li>
+<li>JVM的引用类型有哪些？</li>
+<li>说说垃圾回收期的一些常见算法？</li>
+<li>请你谈谈你对JVM的理解？Java8的虚拟机有什么更新</li>
+<li>JVM的常用参数调优你知道哪些?</li>
+<li>内存快照抓取和MAT分析DUMP文件知道吗？</li>
+<li>谈谈JVM中，对类加载器的认识</li>
+<li>在JVM中，如何判断一个对象是否死亡？</li>
+</ul>
+<h1><a class="header" href="#九spring" id="九spring">九、Spring</a></h1>
+<ul>
+<li>AOP 的代理有哪几种方式？</li>
+<li>怎么实现 JDK 动态代理？</li>
+<li>AOP 的基本概念：切面、连接点、切入点等？</li>
+<li>谈谈你对 IOC 的理解？</li>
+<li>Bean 的生命周期？</li>
+<li>Bean 的作用域?</li>
+<li>Spring 中的单例 Bean 的线程安全问题了解吗？</li>
+<li>谈谈你对 Spring 中的事物的理解？</li>
+<li>Spring 中的事务隔离级别？</li>
+<li>Spring 中的事物传播行为？</li>
+<li>Spring 常用的注入方式有哪些？</li>
+<li>Spring 框架中用到了哪些设计模式？</li>
+<li>Spring是什么?</li>
+</ul>
+<blockquote>
+<p>Spring框架具有两大特性：IOC（控制反转）以及AOP（面相切面），同时它封装了很多成熟的功能可以使我们无需重复造『轮子』。着重说明的是IOC它通过Java的反射机制进行对象的实例化，并且集中统一管理，当然，『工厂模式』也可以进行实例化对象的管理，Spring使用IOC而没有使用『工厂模式』的原因在于IOC是通过反射机制来实现的。当我们的需求出现变动时，工厂模式会需要进行相应的变化。但是IOC的反射机制允许我们不重新编译代码，因为它的对象都是动态生成的。</p>
+</blockquote>
+<ul>
+<li>Spring 的优点？</li>
+<li>Spring的AOP理解</li>
+<li>Spring的IoC理解</li>
+<li>BeanFactory和ApplicationContext有什么区别？</li>
+<li>请解释Spring Bean的生命周期？</li>
+<li>解释Spring支持的几种bean的作用域。</li>
+<li>Spring框架中的单例Beans是线程安全的么？</li>
+<li>Spring如何处理线程并发问题？</li>
+<li>Spring 框架中都用到了哪些设计模式？</li>
+</ul>
+<h1><a class="header" href="#十springmvc" id="十springmvc">十、SpringMVC</a></h1>
+<ul>
+<li>谈谈你对 MVC 模式的理解？</li>
+<li>SpringMVC 的工作原理/执行流程？</li>
+<li>SpringMVC 的重要组件有哪些？</li>
+<li>谈谈你对 DispatcherServlet 的源码理解？</li>
+<li>SpringMVC 常用的注解有哪些？</li>
+<li>SpringMVC 怎么样设定重定向和转发的？</li>
+<li>如何解决 POST 请求中文乱码问题，GET 的又如何处理呢？</li>
+<li>SpringMVC 的控制器是不是单例模式，如果是，有什么问题，怎么解决？</li>
+<li>SpringMVC 里面拦截器是怎么写的？</li>
+<li>SpringMVC 用什么对象从后台向前台传递数据的？</li>
+</ul>
+<h1><a class="header" href="#十一mybatis" id="十一mybatis">十一、MyBatis</a></h1>
+<ul>
+<li>Mybatis 中 #{}和 ${}的区别是什么？</li>
+<li>Mybatis 有几种分页方式？</li>
+<li>Mybatis 逻辑分页和物理分页的区别是什么？</li>
+<li>Mybatis 是否支持延迟加载？延迟加载的原理是什么？</li>
+<li>说一下 Mybatis 的一级缓存和二级缓存？</li>
+<li>Mybatis 和 Hibernate 的区别有哪些？</li>
+</ul>
+<blockquote>
+<p>答：Hibernate框架对面向对象的思想有很好的实践，但是它在处理复杂关联中会带来严重的性能问题。而相比Hibernate框架MyBatis框架则入手相对容易，因为MyBatis框架选择SQL作为它的处理语言，并且MyBatis提供了逆向工程等方法帮助我们快速实践Model和Table的绑定。同时引入MyBatis也意味着破坏一些面向对象的规则。</p>
+</blockquote>
+<ul>
+<li>Mybatis 有哪些执行器（Executor）？</li>
+<li>Mybatis 分页插件的实现原理是什么？</li>
+</ul>
+<h1><a class="header" href="#三设计模式部分" id="三设计模式部分">三、设计模式部分</a></h1>
+<ol>
+<li>请列举出在JDK中几个常用的设计模式?</li>
+<li>什么是设计模式?你是否在你的代码里面使用过任何设计模式?</li>
+<li>Java 中什么叫单例设计模式?请用Java 写出线程安全的单例模式</li>
+<li>在Java 中，什么叫观察者设计模式(observer design pattern)?</li>
+<li>使用工厂模式最主要的好处是什么?在哪里使用?</li>
+<li>举一个用Java 实现的装饰模式(decorator design pattern)? 它是作用于对象层次还是类层次?</li>
+<li>在Java 中，为什么不允许从静态方法中访问非静态变量?</li>
+<li>设计一个ATM机，请说出你的设计思路?</li>
+<li>在Java中，什么时候用重载，什么时候用重写?</li>
+<li>举例说明什么情况下会更倾向于使用抽象类而不是接口?</li>
+</ol>
+<h1><a class="header" href="#四并发编程部分" id="四并发编程部分">四、并发编程部分</a></h1>
+<ul>
+<li>并行和并发有什么区别？</li>
+<li>线程和进程的区别？</li>
+<li>守护线程是什么？</li>
+<li>创建线程的几种方式？</li>
+<li>runnable 和 callable 有什么区别？</li>
+<li>线程状态及转换？</li>
+<li>sleep() 和 wait() 的区别？</li>
+<li>线程的 run() 和 start() 有什么区别？</li>
+<li>在 Java 程序中怎么保证多线程的运行安全？</li>
+<li>Java 线程同步的几种方法？</li>
+<li>Thread.interrupt() 方法的工作原理是什么？</li>
+<li>谈谈对 ThreadLocal 的理解？</li>
+<li>多线程并行运行，主线程怎么收集子线程的信息？</li>
+<li>说一说自己对于 synchronized 关键字的了解？项目中怎么使用的？</li>
+<li>说说 JDK1.6 之后的 synchronized 关键字底层做了哪些优化，可以详细介绍一下这些优化吗？</li>
+<li>谈谈 synchronized 和 ReenTrantLock 的区别？</li>
+<li>synchronized 和 volatile 的区别是什么？</li>
+<li>简单介绍下 volatile？volatile 的底层原理是什么？内存屏障是如何实现的？</li>
+<li>说下对 ReentrantReadWriteLock 的理解？</li>
+<li>说下对悲观锁和乐观锁的理解？</li>
+<li>乐观锁常见的两种实现方式是什么？分别有什么问题？</li>
+<li>CAS 和 synchronized 的使用场景？</li>
+<li>什么是 CAS，内部怎么实现的？</li>
+<li>简单说下对 Java 中的原子类的理解？atomic 的原理是什么？</li>
+<li>说下对同步器 AQS 的理解？</li>
+<li>说下对信号量 Semaphore 的理解？</li>
+<li>CountDownLatch 和 CyclicBarrier 有什么区别？</li>
+<li>说下对线程池的理解？为什么要使用线程池？</li>
+<li>实现 Runnable 接口和 Callable 接口的区别？</li>
+<li>执行 execute() 方法和 submit() 方法的区别是什么呢？</li>
+<li>如何创建线程池？</li>
+<li>创建线程池的参数有哪些？</li>
+<li>线程池中的的线程数一般怎么设置？需要考虑哪些问题？</li>
+<li>说下对 Fork/Join 并行计算框架的理解？</li>
+<li>JDK 中提供了哪些并发容器？</li>
+<li>谈谈对 CopyOnWriteArrayList 的理解？</li>
+<li>谈谈对 ConcurrentLinkedQueue 的理解？</li>
+<li>谈谈对 ConcurrentSkipListMap 的理解？</li>
+<li>谈谈对 BlockingQueue 的理解？分别有哪些实现类？</li>
+</ul>
+<h2><a class="header" href="#1-synchronized-相关问题" id="1-synchronized-相关问题">1. Synchronized 相关问题</a></h2>
+<ul>
+<li>Synchronized用过吗，其原理是什么?</li>
+<li>你刚才提到获取对象的锁，这个&quot;锁”到底是什么?如何确定对象的锁?</li>
+<li>什么是可重入性，为什么说Synchronized是可重入锁?</li>
+<li>JVM对Java 的原生锁做了哪些优化?</li>
+<li>为什么说Synchronized 是非公平锁?</li>
+<li>什么是锁消除和锁粗化?</li>
+<li>为什么说Synchronized 是一个悲观锁 ?乐观锁的实现原理又是什么?什么是CAS，它有什么特性?</li>
+<li>乐观锁一定就是好的吗？</li>
+</ul>
+<h2><a class="header" href="#2-可重入锁reentrantlock-及其他显式锁相关问题" id="2-可重入锁reentrantlock-及其他显式锁相关问题">2. 可重入锁ReentrantLock 及其他显式锁相关问题</a></h2>
+<ul>
+<li>跟Synchronized 相比，可重入锁ReentrantLock 其实现原理有什么不同?</li>
+<li>那么请谈谈AQS框架是怎么回事儿?</li>
+<li>请尽可能详尽地对比下Synchronized和ReentrantLock 的异同。</li>
+<li>ReentrantLock是如何实现可重入性的?</li>
+<li>除了ReetrantLock，你还接触过JUC 中的哪些并发工具?</li>
+<li>请谈谈ReadWriteLock和StampedLock.</li>
+<li>如何让Java 的线程彼此同步?你了解过哪些同步器?请分别介绍下。</li>
+<li>CyclicBarrier 和CountDownLatch 看起来很相似，请对比下呢?</li>
+</ul>
+<h2><a class="header" href="#3-java线程池相关问题" id="3-java线程池相关问题">3. Java线程池相关问题</a></h2>
+<ul>
+<li>Java中的线程池是如何实现的?</li>
+<li>创建线程池的几个核心构造参数?</li>
+<li>线程池中的线程是怎么创建的?是一开始就随着线程池的启动创建好的吗?</li>
+<li>既然提到可以通过配置不同参数创建出不同的线程池，那么Java中默认实现好的线程池又有哪些呢?请比较它们的异同。</li>
+<li>如何在Java 线程池中提交线程?</li>
+</ul>
+<h2><a class="header" href="#4-java内存模型相关问题" id="4-java内存模型相关问题">4. Java内存模型相关问题</a></h2>
+<ul>
+<li>什么是Java 的内存模型，Java 中各个线程是怎么彼此看到对方的变量的?</li>
+<li>请谈谈volatile 有什么特点，为什么它能保证变量对所有线程的可见性?</li>
+<li>既然volatile 能够保证线程间的变量可见性，是不是就意味着基于volatile变量的运算就是并发安全的?</li>
+<li>请对比下volatile 对比Synchronized 的异同。</li>
+<li>请谈谈ThreadLocal是怎么解决并发安全的?</li>
+<li>很多人都说要慎用ThreadLocal, 谈谈你的理解，使用ThreadLocal需要注意些什么?
+docker</li>
+</ul>
+<h1><a class="header" href="#学习java要多读代码" id="学习java要多读代码">学习Java要多读代码</a></h1>
+<ul>
+<li>JVM底层</li>
+<li>Spring家族</li>
+<li>ORM-Hibernate/Mybabit</li>
+<li>线程池/数据库连接池</li>
+<li>高可用接入：Netty</li>
+</ul>
+<h1><a class="header" href="#关于string" id="关于string">关于String</a></h1>
+<p>三个类：String、StringBuffer、StringBuilder。<br />
+StringBuffer支持并行。StringBuffer和StringBuilder都继承自抽象类AbstractStringBuilder</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../java/Java并发.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../java/Java基础.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../java/Java并发.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../java/Java基础.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

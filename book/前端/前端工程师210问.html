@@ -1,0 +1,1050 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>前端工程师210问.md - 面试</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">1.</strong> C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../C++/C++面试题.html"><strong aria-hidden="true">1.1.</strong> C++面试题.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">2.</strong> 系统设计</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../系统设计/短链接服务.html"><strong aria-hidden="true">2.1.</strong> 短链接服务.md</a></li><li class="chapter-item expanded "><a href="../系统设计/系统设计基础.html"><strong aria-hidden="true">2.2.</strong> 系统设计基础.md</a></li><li class="chapter-item expanded "><a href="../系统设计/工程设计.html"><strong aria-hidden="true">2.3.</strong> 工程设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/两个文件URL去重.html"><strong aria-hidden="true">2.4.</strong> 两个文件URL去重.md</a></li><li class="chapter-item expanded "><a href="../系统设计/关注关系设计.html"><strong aria-hidden="true">2.5.</strong> 关注关系设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/秒杀系统.html"><strong aria-hidden="true">2.6.</strong> 秒杀系统.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">3.</strong> 操作系统</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-死锁.html"><strong aria-hidden="true">3.1.</strong> 计算机操作系统-死锁.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-概述.html"><strong aria-hidden="true">3.2.</strong> 计算机操作系统-概述.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-内存管理.html"><strong aria-hidden="true">3.3.</strong> 计算机操作系统-内存管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/Linux.html"><strong aria-hidden="true">3.4.</strong> Linux.md</a></li><li class="chapter-item expanded "><a href="../操作系统/进程与线程通信方式.html"><strong aria-hidden="true">3.5.</strong> 进程与线程通信方式.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-链接.html"><strong aria-hidden="true">3.6.</strong> 计算机操作系统-链接.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-设备管理.html"><strong aria-hidden="true">3.7.</strong> 计算机操作系统-设备管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-进程管理.html"><strong aria-hidden="true">3.8.</strong> 计算机操作系统-进程管理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">4.</strong> 算法</a></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../redis/Redis.html"><strong aria-hidden="true">5.1.</strong> Redis.md</a></li><li class="chapter-item expanded "><a href="../redis/Redis21问.html"><strong aria-hidden="true">5.2.</strong> Redis21问.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">6.</strong> 网络安全</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../网络安全/攻击技术.html"><strong aria-hidden="true">6.1.</strong> 攻击技术.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">7.</strong> 数据库</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../数据库/分库分表.html"><strong aria-hidden="true">7.1.</strong> 分库分表.md</a></li><li class="chapter-item expanded "><a href="../数据库/MySQL.html"><strong aria-hidden="true">7.2.</strong> MySQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/SQL.html"><strong aria-hidden="true">7.3.</strong> SQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/缓存.html"><strong aria-hidden="true">7.4.</strong> 缓存.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库系统原理.html"><strong aria-hidden="true">7.5.</strong> 数据库系统原理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">8.</strong> java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/JavaIO.html"><strong aria-hidden="true">8.1.</strong> JavaIO.md</a></li><li class="chapter-item expanded "><a href="../java/Java并发.html"><strong aria-hidden="true">8.2.</strong> Java并发.md</a></li><li class="chapter-item expanded "><a href="../java/Java面试题.html"><strong aria-hidden="true">8.3.</strong> Java面试题.md</a></li><li class="chapter-item expanded "><a href="../java/Java基础.html"><strong aria-hidden="true">8.4.</strong> Java基础.md</a></li><li class="chapter-item expanded "><a href="../java/Java容器.html"><strong aria-hidden="true">8.5.</strong> Java容器.md</a></li><li class="chapter-item expanded "><a href="../java/Java虚拟机.html"><strong aria-hidden="true">8.6.</strong> Java虚拟机.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">9.</strong> 计算机网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">9.1.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-网络层.html"><strong aria-hidden="true">9.2.</strong> 计算机网络-网络层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-应用层.html"><strong aria-hidden="true">9.3.</strong> 计算机网络-应用层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-概述.html"><strong aria-hidden="true">9.4.</strong> 计算机网络-概述.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/Socket.html"><strong aria-hidden="true">9.5.</strong> Socket.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP和UDP的区别.html"><strong aria-hidden="true">9.6.</strong> TCP和UDP的区别.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-物理层.html"><strong aria-hidden="true">9.7.</strong> 计算机网络-物理层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-链路层.html"><strong aria-hidden="true">9.8.</strong> 计算机网络-链路层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-传输层.html"><strong aria-hidden="true">9.9.</strong> 计算机网络-传输层.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">10.</strong> 常识</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../常识/微服务.html"><strong aria-hidden="true">10.1.</strong> 微服务.md</a></li><li class="chapter-item expanded "><a href="../常识/Python.html"><strong aria-hidden="true">10.2.</strong> Python.md</a></li><li class="chapter-item expanded "><a href="../常识/大数据.html"><strong aria-hidden="true">10.3.</strong> 大数据.md</a></li><li class="chapter-item expanded "><a href="../常识/正则表达式.html"><strong aria-hidden="true">10.4.</strong> 正则表达式.md</a></li><li class="chapter-item expanded "><a href="../常识/构建工具.html"><strong aria-hidden="true">10.5.</strong> 构建工具.md</a></li><li class="chapter-item expanded "><a href="../常识/面向对象思想.html"><strong aria-hidden="true">10.6.</strong> 面向对象思想.md</a></li><li class="chapter-item expanded "><a href="../常识/分布式.html"><strong aria-hidden="true">10.7.</strong> 分布式.md</a></li><li class="chapter-item expanded "><a href="../常识/结集.html"><strong aria-hidden="true">10.8.</strong> 结集.md</a></li><li class="chapter-item expanded "><a href="../常识/代码风格规范.html"><strong aria-hidden="true">10.9.</strong> 代码风格规范.md</a></li><li class="chapter-item expanded "><a href="../常识/简历的重要性.html"><strong aria-hidden="true">10.10.</strong> 简历的重要性.md</a></li><li class="chapter-item expanded "><a href="../常识/消息队列.html"><strong aria-hidden="true">10.11.</strong> 消息队列.md</a></li><li class="chapter-item expanded "><a href="../常识/腾讯面试合集.html"><strong aria-hidden="true">10.12.</strong> 腾讯面试合集.md</a></li><li class="chapter-item expanded "><a href="../常识/常用组件.html"><strong aria-hidden="true">10.13.</strong> 常用组件.md</a></li><li class="chapter-item expanded "><a href="../常识/数据结构与算法.html"><strong aria-hidden="true">10.14.</strong> 数据结构与算法.md</a></li><li class="chapter-item expanded "><a href="../常识/计算机基础.html"><strong aria-hidden="true">10.15.</strong> 计算机基础.md</a></li><li class="chapter-item expanded "><a href="../常识/Git.html"><strong aria-hidden="true">10.16.</strong> Git.md</a></li><li class="chapter-item expanded "><a href="../常识/代码可读性.html"><strong aria-hidden="true">10.17.</strong> 代码可读性.md</a></li><li class="chapter-item expanded "><a href="../常识/Docker.html"><strong aria-hidden="true">10.18.</strong> Docker.md</a></li><li class="chapter-item expanded "><a href="../常识/阿里面试题合集.html"><strong aria-hidden="true">10.19.</strong> 阿里面试题合集.md</a></li><li class="chapter-item expanded "><a href="../常识/集群.html"><strong aria-hidden="true">10.20.</strong> 集群.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">11.</strong> 设计模式</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../设计模式/设计模式-简单工厂.html"><strong aria-hidden="true">11.1.</strong> 设计模式-简单工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-代理.html"><strong aria-hidden="true">11.2.</strong> 设计模式-代理.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-外观.html"><strong aria-hidden="true">11.3.</strong> 设计模式-外观.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式.html"><strong aria-hidden="true">11.4.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-观察者.html"><strong aria-hidden="true">11.5.</strong> 设计模式-观察者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-装饰.html"><strong aria-hidden="true">11.6.</strong> 设计模式-装饰.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-迭代器.html"><strong aria-hidden="true">11.7.</strong> 设计模式-迭代器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-组合.html"><strong aria-hidden="true">11.8.</strong> 设计模式-组合.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-状态.html"><strong aria-hidden="true">11.9.</strong> 设计模式-状态.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-单例.html"><strong aria-hidden="true">11.10.</strong> 设计模式-单例.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-抽象工厂.html"><strong aria-hidden="true">11.11.</strong> 设计模式-抽象工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-生成器.html"><strong aria-hidden="true">11.12.</strong> 设计模式-生成器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-策略.html"><strong aria-hidden="true">11.13.</strong> 设计模式-策略.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-命令.html"><strong aria-hidden="true">11.14.</strong> 设计模式-命令.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-桥接.html"><strong aria-hidden="true">11.15.</strong> 设计模式-桥接.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-工厂方法.html"><strong aria-hidden="true">11.16.</strong> 设计模式-工厂方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-中介者.html"><strong aria-hidden="true">11.17.</strong> 设计模式-中介者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-访问者.html"><strong aria-hidden="true">11.18.</strong> 设计模式-访问者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-空对象.html"><strong aria-hidden="true">11.19.</strong> 设计模式-空对象.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-备忘录.html"><strong aria-hidden="true">11.20.</strong> 设计模式-备忘录.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-模板方法.html"><strong aria-hidden="true">11.21.</strong> 设计模式-模板方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-适配器.html"><strong aria-hidden="true">11.22.</strong> 设计模式-适配器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-责任链.html"><strong aria-hidden="true">11.23.</strong> 设计模式-责任链.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-享元.html"><strong aria-hidden="true">11.24.</strong> 设计模式-享元.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-原型模式.html"><strong aria-hidden="true">11.25.</strong> 设计模式-原型模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-解释器.html"><strong aria-hidden="true">11.26.</strong> 设计模式-解释器.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">12.</strong> 前端</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../前端/前端.html"><strong aria-hidden="true">12.1.</strong> 前端.md</a></li><li class="chapter-item expanded "><a href="../前端/前端工程师210问.html" class="active"><strong aria-hidden="true">12.2.</strong> 前端工程师210问.md</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">面试</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>1、手写jsonp的实现</p>
+<p>2、手写链表倒数第K个查找</p>
+<p>3、http请求头，请求体，cookie在哪个里面？url在哪里面？</p>
+<p>4、原型链的解释</p>
+<p>5、对闭包的理解，实现一个暴露内部变量，而且外部可以访问修改的函数</p>
+<p>6、基本的数据类型</p>
+<p>7、基本的两列自适应布局</p>
+<p>8、unix中常用的命令行</p>
+<p>9、OSI模型，HTTP,TCP,UDP分别在哪些层</p>
+<p>10、解释平衡二叉树，以及在数据结构中的应用（红黑树）</p>
+<p>11、快排的时间复杂度和空间复杂度</p>
+<p>12、手写一个jQuery插件</p>
+<p>13、在jquery方法和原型上面添加方法的区别和实现，以及jquery对象的实现</p>
+<p>14、手写一个递归函数</p>
+<p>15、对前端路由的理解？前后端路由的区别？</p>
+<p>16、介绍一下webpack和gulp，以及项目中具体的使用</p>
+<p>17、你对es6的了解</p>
+<p>18、解释一下vue和react，以及异同点</p>
+<p>19、关于平衡二叉树</p>
+<p>20、前后端分离的意义以及对前端工程化的理解</p>
+<p>21、使用css实现一个三角形</p>
+<p>22、用promise手写ajax</p>
+<p>23、手写一个类的继承，并解释一下</p>
+<p>24、解释一下call函数和apply函数的作用，以及用法</p>
+<p>25、你说自己抗压能力强，具体表现在哪里？</p>
+<p>26、对前端前景的展望，以后前端会怎么发展</p>
+<p>27、手写第一次面试没有写出来的链表问题，要求用es6写</p>
+<p>28、平时是怎么学技术的？</p>
+<p>29、平时大学里面时间是怎么规划的？</p>
+<p>30、接下来有什么计划？这个学期和下个学期的计划是？</p>
+<p>31、项目中遇到的难点，或者你学习路上的难点</p>
+<p>32、你是通过什么方法和途径来学习前端的</p>
+<p>33、手写一个简单遍历算法</p>
+<p>34、解释一下react和vue，以及区别</p>
+<p>35、你在团队中更倾向于什么角色？</p>
+<p>36、对java的理解</p>
+<p>37、介绍node.js，并且介绍你用它做的项目</p>
+<p>38、手写一个js的深克隆</p>
+<p>39、for函数里面setTimeout异步问题</p>
+<p>40、手写归并排序</p>
+<p>41、介绍自己的项目</p>
+<p>42、实现两个数组的排序合并</p>
+<p>43、手写一个原生ajax</p>
+<p>44、手写一个promise版的ajax</p>
+<p>45、手写实现一个promise</p>
+<p>46、手写实现requireJS模块实现</p>
+<p>47、手写实现jquery里面的insertAfter</p>
+<p>48、react和vue的介绍以及异同</p>
+<p>49、AMD和CMD，commonJS的区别</p>
+<p>50、介绍一下backbone</p>
+<p>51、了解过SEO吗？</p>
+<p>52、低版本浏览器不支持HTML5标签怎么解决？</p>
+<p>53、用js使低版本浏览器支持HTML5标签 底层是怎么实现的？</p>
+<p>54、实现一个布局：左边固定宽度为200，右边自适应，而且滚动条要自动选择只出现最高的那个</p>
+<p>55、画出盒子模型，要使谷歌浏览器的盒子模型显示得跟IE浏览器一致（让谷歌跟ie一致，不是ie跟谷歌一致），该怎么做？</p>
+<p>56、手写JS实现类继承，讲原型链原理，并解释new一个对象的过程都发生了什么</p>
+<p>57、Array对象自带的方法，一一列举</p>
+<p>58、若干个数字，怎么选出最大的五个</p>
+<p>59、Array对象自带的排序函数底层是怎么实现的？</p>
+<p>60、常用的排序算法有哪些，介绍一下选择排序</p>
+<p>61、了解navigator对象吗？</p>
+<p>62、手写一个正则表达式，验证邮箱</p>
+<p>63、link和@import引入CSS的区别？</p>
+<p>64、刚才说有些浏览器不兼容@import，具体指哪些浏览器？</p>
+<p>65、介绍一下cookie,localstorage,sessionstorage,session</p>
+<p>66、jquery绑定click的方法有几种</p>
+<p>67、你的优点/竞争力</p>
+<p>68、移动端适配问题</p>
+<p>69、react的难点在哪里</p>
+<p>70、做过css动画吗</p>
+<p>71、如何优化网站</p>
+<p>72、以后的规划</p>
+<p>73、你做过最困难的事情是啥？</p>
+<p>74、css3 html5新特性</p>
+<p>75、闭包，ES6，跨域</p>
+<p>76、问做过啥项目，用到什么技术，遇到什么困难</p>
+<p>77、兼容性</p>
+<p>78、盒子模型</p>
+<p>79、Array的unshift() method的作用是什么？如何连接两个Array？如何在Array里移除一个元素？</p>
+<p>80、用纸笔写一个Closure，任意形式和内容</p>
+<p>81、知不知道Array-like Object？</p>
+<p>82、如何用Native JavaScript来读写Cookie？</p>
+<p>83、知不知道CSS Box-model？</p>
+<p>84、如何做一个AJAX Request？</p>
+<p>85、Cross-domain access有没有了解？</p>
+<p>86、前端安全方面有没有了解？XSS和CSRF如何攻防？</p>
+<p>87、HTTP Response的Header里面都有些啥？</p>
+<p>88、知不知道HTTP2？</p>
+<p>89、输入URL后发生了什么？</p>
+<p>90、new operator实际上做了什么？</p>
+<p>91、面向对象的属性有哪些？</p>
+<p>92、做一个两栏布局，左边fixed width，右边responsive，用纸笔手写</p>
+<p>93、讲一下AJAX Request</p>
+<p>94、讲一下Cross-domain access</p>
+<p>95、介绍一下做过的项目</p>
+<p>96、问到了多个服务器怎么弄，架构之类的</p>
+<p>97、angular的渲染流程</p>
+<p>98、脏检查</p>
+<p>99、nodejs的架构、优缺点、回调</p>
+<p>100、css 盒模型</p>
+<p>101、css 布局，左边定宽右边自适应</p>
+<p>102、冒泡和捕获，事件流哪三个阶段？</p>
+<p>103、实现事件代理</p>
+<p>104、原型链</p>
+<p>105、继承的两种方法</p>
+<p>106、ajax，原生ajax的四个过程</p>
+<p>107、闭包，简单说一个闭包的应用，然后闭包的主要作用是什么</p>
+<p>108、css:两个块状元素上下的margin-top和margin-bottom会重叠。啥原因？怎么解决？</p>
+<p>109、js：写一个递归。就是每隔5秒调用一个自身，一共100次</p>
+<p>110、cookie和session有什么区别</p>
+<p>111、网络分层结构</p>
+<p>112、你的不足是什么？</p>
+<p>113、做了那么多项目，有没有自己的归纳总结</p>
+<p>114、工程怎么进行文件管理</p>
+<p>115、less和sass掌握程度</p>
+<p>116、Cookie 是否会被覆盖，localStorage是否会被覆盖</p>
+<p>117、事件代理js实现</p>
+<p>118、Css实现动画效果</p>
+<p>119、Animation还有哪些其他属性</p>
+<p>120、Css实现三列布局</p>
+<p>121、Css实现保持长宽比1:1</p>
+<p>122、Css实现两个自适应等宽元素中间空10个像素</p>
+<p>123、requireJS的原理是什么</p>
+<p>124、如何保持登录状态</p>
+<p>125、浮动的原理以及如何清除浮动</p>
+<p>126、Html的语义化</p>
+<p>127、原生js添加class怎么添加，如果本身已经有class了，会不会覆盖，怎么保留？</p>
+<p>128、Jsonp的原理。怎么去读取一个script里面的数据？</p>
+<p>129、如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行。</p>
+<p>130、304是什么意思？有没有方法不请求不经过服务器直接使用缓存</p>
+<p>131、http请求头有哪些字段</p>
+<p>132、数组去除一个函数。用arr.splice。又问splice返回了什么？应该返回的是去除的元素。</p>
+<p>133、js异步的方法（promise，generator，async）</p>
+<p>134、Cookie跨域请求能不能带上</p>
+<p>135、最近看什么开源项目？</p>
+<p>136、commonJS和AMD</p>
+<p>137、平时是怎么学习的？</p>
+<p>138、为什么要用translate3d？</p>
+<p>139、对象中key-value的value怎么再放一个对象？</p>
+<p>140、Get和post的区别？</p>
+<p>145、Post一个file的时候file放在哪的？</p>
+<p>146、说说你对组件的理解</p>
+<p>147、组件的html怎么进行管理</p>
+<p>148、js的异步加载，promise的三种状态，ES7中的async用过么</p>
+<p>149、静态属性怎么继承</p>
+<p>150、js原型链的继承</p>
+<p>151、jquery和zepto有什么区别</p>
+<p>152、angular的双向绑定原理</p>
+<p>153、angular和react的认识</p>
+<p>154、MVVM是什么</p>
+<p>155、移动端是指手机浏览器，还是native，还是hybrid</p>
+<p>156、你用了移动端的什么库类和框架？</p>
+<p>157、移动端要注意哪些？</p>
+<p>158、适配有去考虑么，retina屏幕啊？</p>
+<p>159、rem是什么？em是什么？如果上一层就是根root了，em和rem等价么？</p>
+<p>160、怎么测试的？会自动化测试么？</p>
+<p>161、你觉得你什么技术最擅长？</p>
+<p>162、你平时有没有什么技术的沉淀？</p>
+<p>163、单向链表怎么查找有没有环？</p>
+<p>164、怎么得到一个页面的a标签？</p>
+<p>165、怎么在页面里放置一个很简单的图标，不能用img和background-img？</p>
+<p>166、正则表达式判断url</p>
+<p>167、怎么去除字符串前后的空格</p>
+<p>168、实现页面的局部刷新</p>
+<p>169、绝对定位与相对定位的区别</p>
+<p>170、js轮播实现思路</p>
+<p>171、使用js画一个抛物线，抛物线上有个小球随着抛物线运动，有两个按钮能使小球继续运动停止运动</p>
+<p>172、java五子棋，说下实现思路</p>
+<p>173、如何让各种情况下的div居中(绝对定位的div,垂直居中,水平居中)？</p>
+<p>174、display有哪些值？说明他们的作用</p>
+<p>175、css定义的权重</p>
+<p>176、requirejs实现原理</p>
+<p>177、requirejs怎么防止重复加载</p>
+<p>178、ES6里头的箭头函数的this对象与其他的有啥区别</p>
+<p>179、tcp/udp区别</p>
+<p>180、tcp三次握手过程</p>
+<p>181、xss与csrf的原理与怎么防范</p>
+<p>182、mysql与 MongoDB的区别</p>
+<p>183、w3c事件与IE事件的区别</p>
+<p>184、有没有上传过些什么npm模块</p>
+<p>185、IE与W3C怎么阻止事件的冒泡</p>
+<p>186、gulp底层实现原理</p>
+<p>187、webpack底层实现原理</p>
+<p>188、gulp与webpack区别</p>
+<p>189、vuejs与angularjs的区别</p>
+<p>190、vuex是用来做什么的</p>
+<p>191、说下你知道的响应状态码</p>
+<p>192、ajax的过程以及 readyState几个状态的含义</p>
+<p>193、你除了前端之外还会些什么？</p>
+<p>194、cookie与session的区别</p>
+<p>195、一些关于php与java的问题</p>
+<p>196、你觉得你哪个项目是你做的最好的</p>
+<p>197、说说你在项目中遇到了哪些困难,是怎么解决的</p>
+<p>198、前端优化你知道哪些</p>
+<p>199、webpack是用来干嘛的</p>
+<p>200、webpack与gulp的区别</p>
+<p>201、es6与es7了解多少</p>
+<p>202、说下你知道的响应状态码</p>
+<p>203、看过哪些框架的源码</p>
+<p>204、遇到过哪些浏览器兼容性问题</p>
+<p>205、清除浮动有哪几种方式,分别说说</p>
+<p>206、你知道有哪些跨域方式,分别说说</p>
+<p>207、JavaScript有哪几种类型的值</p>
+<p>208、使用 new操作符时具体是干了些什么</p>
+<p>209、学习前端的方法以及途径</p>
+<p>210、怎么实现两个大整数的相乘，说下思路</p>
+<p>211、你学过数据结构没,说说你都了解些什么</p>
+<p>212、你学过计算机操作系统没,说说你都了解些什么</p>
+<p>213、你学过计算机组成原理没,说说你都了解些什么</p>
+<p>214、你学过算法没,说说你都了解些什么</p>
+<p>215、说下选择排序,冒泡排序的实现思路</p>
+<p>216、用过哪些框架</p>
+<p>217、让你设计一个前端css框架你怎么做</p>
+<p>218、了解哪些设计模式说说看</p>
+<p>219、说下你所了解的设计模式的优点</p>
+<p>220、vue源码结构</p>
+<p>221、状态码</p>
+<p>222、浏览器缓存的区别</p>
+<p>223、304与200读取缓存的区别</p>
+<p>224、http请求头有哪些,说说看你了解哪些</p>
+<p>225、js中this的作用</p>
+<p>226、js中上下文是什么</p>
+<p>227、js有哪些函数能改变上下文</p>
+<p>228、你所了解的跨域的方法都说说看你了解的？</p>
+<p>229、要是让你自己写一个js框架你会用到哪些设计模式</p>
+<p>230、平常在项目中用到过哪些设计模式,说说看</p>
+<p>231、一来给了张纸要求写js自定义事件</p>
+<p>232、前端跨域的方法</p>
+<p>233、call与apply的区别</p>
+<p>234、h5有个api能定位你知道是哪个吗？</p>
+<p>235、vue与angularjs中双向数据绑定是怎样实现的？</p>
+<p>236、webpack怎样配置？</p>
+<p>237、nodejs中的文件怎么读写？</p>
+<p>238、link和@import有什么区别？</p>
+<p>239、cookies，sessionStorage 和 localStorage 的区别</p>
+<p>240、看过哪些前端的书？平时是怎么学习的</p>
+<p>241、说下你所理解的mvc与mvvc</p>
+<p>242、position有哪些值,说下各自的作用</p>
+<p>243、写个从几个li中取下标的闭包代码</p>
+<p>244、你的职业规划是怎么样的？</p>
+<p>245、移动端性能优化</p>
+<p>246、lazyload如何实现</p>
+<p>247、点透问题</p>
+<p>248、前端安全</p>
+<p>249、原生js模板引擎</p>
+<p>250、repaint和reflow区别</p>
+<p>251、requirejs如何避免循环依赖？</p>
+<p>252、实现布局：左边一张图片，右边一段文字（不是环绕）</p>
+<p>253、window.onload和$(document).ready()的区别，浏览器加载转圈结束时哪个时间点？</p>
+<p>254、form表单当前页面无刷新提交 target iframe</p>
+<p>255、setTimeout和setInterval区别，如何互相实现？</p>
+<p>256、如何避免多重回调—promise，promise简单描述一下，如何在外部进行resolve()</p>
+<p>257、margin坍塌？水平方向会不会坍塌？</p>
+<p>258、伪类和伪元素区别</p>
+<p>259、vue如何实现父子组件通信，以及非父子组件通信</p>
+<p>260、数组去重</p>
+<p>261、使用flex布局实现三等分，左右两个元素分别贴到左边和右边，垂直居中</p>
+<p>262、平时如何学前端的，看了哪些书，关注了哪些公众号</p>
+<p>263、实现bind函数</p>
+<p>264、数组和链表区别，分别适合什么数据结构</p>
+<p>265、对mvc的理解</p>
+<p>266、描述一个印象最深的项目，在其中担任的角色，解决什么问题</p>
+<p>267、http状态码。。。401和403区别？</p>
+<p>268、描述下二分查找</p>
+<p>269、为什么选择前端，如何学习的，看了哪些书，《js高级程序设计》和《你不知道的js》有什么区别，看书，看博客，看公众号三者的时间是如何分配的？</p>
+<p>270、如何评价BAT？</p>
+<p>271、描述下在实习中做过的一个项目，解决了什么问题，在其中担任了什么角色？这个过程存在什么问题，有什么值得改进的地方？</p>
+<p>272、如何看待加班，如果有个项目需要连续一个月加班，你怎么看？</p>
+<p>273、遇到的压力最大的一件事是什么？如何解决的？</p>
+<p>274、平时有什么爱好</p>
+<p>275、自身有待改进的地方</p>
+<p>276、n长的数组放入n+1个数，不能重复，找出那个缺失的数</p>
+<p>277、手里有什么offer</p>
+<p>278、你对于第一份工作最看重的三个方面是什么？</p>
+<p>279、如何评价现在的前端？</p>
+<p>280、用原生js实现复选框选择以及全选非全选功能</p>
+<p>281、用4个颜色给一个六面体上色有多少种情况</p>
+<p>282、amd和cmd区别</p>
+<p>283、为什么选择前端，移动端性能优化</p>
+<p>284、vue的特点？双向数据绑定是如何实现的</p>
+<p>285、Object.defineProperty</p>
+<p>286、算法题：数组去重，去除重复两次以上的元素，代码题：嵌套的ul-li结构，根据input中输入的内容，去除相应的li节点，且如果某个嵌套的ul下面的li都被移除，则该ul的父li节点也要被移除</p>
+<p>287、页面加载过程</p>
+<p>288、浏览器如何实现图片缓存</p>
+<ol>
+<li>express和koa的对比，两者中间件的原理，koa捕获异常多种情况说一下</li>
+<li>你项目里用到第三方登录涉及的oAuth(JWT)协议的实现原理，以及你本地的实现原理，第三方登录怎么样保证安全性</li>
+<li>说下快排完整性</li>
+<li>react和vue的区别，你开发如何选择技术栈</li>
+<li>express里面登录的session服务怎么样实现分布式服务</li>
+<li>vue的理解</li>
+<li>vue的双向数据绑定的原理</li>
+<li>vue怎么样实现数组绑定</li>
+<li>js的继承</li>
+<li>call和apply的区别</li>
+<li>ajax是同步还是异步，怎么样实现同步</li>
+<li>ajax实现过程</li>
+<li>闭包的作用理解，以及那些地方用过闭包，以及闭包的缺点，如何实现闭包</li>
+<li>跨域方法以及怎么样实现的与原理</li>
+<li>工作中做的项目有什么亮点</li>
+<li>webpack工程构建工具怎么样用</li>
+<li>数组去重</li>
+<li>快排和冒泡原理</li>
+<li>http状态码</li>
+<li>nodejs了解多少</li>
+<li>为什么css样式初始化，目的是为了什么</li>
+<li>为什么浏览器会产生同源策略</li>
+<li>axios有什么特点</li>
+<li>cookie和webstrage的区别以及cookie怎么样使用？原生cookie怎么样封装</li>
+<li>三次握手</li>
+<li>对跨域了解吗。jsonp的限制</li>
+<li>浏览器那些地方用到了异步</li>
+<li>css弹性布局，那些地方用到过</li>
+<li>position属性有哪些值，分别有什么含义</li>
+<li>ES6用过吗，新增了那些东西，你用到过什么</li>
+<li>const和let的区别，可以改变const定义对象某个属性吗</li>
+<li>箭头函数，箭头函数的特点</li>
+<li>js的this理解， 如何改变this的指向</li>
+<li>cookie有什么限制</li>
+<li>js的事件机制</li>
+<li>settimeout的机制</li>
+<li>遇到过兼容性的问题吗，要如何处理</li>
+<li>项目中使用过构建工具吗</li>
+<li>平时如何学习前端的，最近在看的一本书</li>
+<li>内存泄露的排除定位和解决方法</li>
+<li>垃圾回收机制</li>
+<li>websocket实现原理</li>
+<li>http状态码301 302的区别，304是啥</li>
+<li>缓存机制，协商协议</li>
+<li>定时器setTimeout的运行机制</li>
+<li>事件循环机制 eventloop</li>
+<li>异步es5 es6 es7分别怎么样解决</li>
+<li>js的继承的实现方法</li>
+<li>清除浮动的方法</li>
+<li>常见布局的方法</li>
+<li>从输入一个url到浏览器页面展示都经历了哪些过程</li>
+<li>new生成了一个对象的过程（核心return this）</li>
+<li>请简单说明什么是事件冒泡和事件捕获以及事件委托</li>
+<li>实现一个两边宽度固定中间自适应的三列布局，圣杯布局，双飞燕</li>
+<li>flex布局有没有了解</li>
+<li>请简述一下js原型链</li>
+<li>es6有了解吗，请简单说一下promise机制，异步的承诺机制，顺势说一下解决回调地狱的问题</li>
+<li>手写一下深拷贝，答案提示：JSON.parse(JSON.stringify(obj)) 用JSON实现深拷贝</li>
+<li>== 和 === 的却别，，typeof null的结果是什么</li>
+<li>同步和异步的执行顺序</li>
+<li>get和post的请求区别</li>
+<li>什么情况算是跨域，如何解决跨域问题</li>
+<li>一个有序的数组如何进行查找操作</li>
+<li>手写一个快速排序</li>
+<li>事件委托理解，原理，好处，应用场景</li>
+<li>前端框架用过什么？</li>
+<li>vue和react的区别</li>
+<li>vue的原理</li>
+<li>闭包</li>
+<li>let和var的区别，let的产生背景？</li>
+<li>定宽定高，如何垂直居中，那不定宽定高呢？</li>
+<li>https的请求过程</li>
+<li>代码规范</li>
+<li>项目中遇到过什么难点，如何解决的</li>
+<li>尾递归问题</li>
+<li>电脑里有很多大小不一样的照片，我现在要复制到U盘上，但是U盘容量固定，让你写一个程序，挑选一组照片，让U盘的剩余空间最小。</li>
+<li>后端会哪些语言</li>
+<li>讲下如何负载均衡</li>
+<li>cookie和session的区别和联系</li>
+<li>nodejs是单线程还是多线程的，为什么能去开很多异步请求去访问其他接口</li>
+<li>一般你是如何操作数据库的？会哪些数据库</li>
+<li>mysql的底层引擎，发布</li>
+<li>mysql语言写的如何，怎么样判断sql语句的性能？如何优化？</li>
+<li>如何去除数组中的重复的项？</li>
+<li>遍历数组处理用for循环还有什么方法吗</li>
+<li>浏览器出于安全考虑有？（同源策略）</li>
+<li>登录原理</li>
+<li>让我设计一个页面，选择男或女，搜索出相对性</li>
+<li>发送请求有哪些？</li>
+<li>web的安全问题？</li>
+<li>自我介绍</li>
+<li>JS如何计算浏览器的渲染时间的</li>
+<li>浏览器的缓存</li>
+<li>var的变量提升底层原理是什么？</li>
+<li>event loop讲讲</li>
+<li>JS的回收机制说一下</li>
+<li>数组常用的方法有哪些</li>
+<li>websock的底层原理讲讲</li>
+<li>你的聊天室项目，如果数据传输出错了怎么办？</li>
+<li>现在有一大段文字，如何在页面中设置一个窗口滚动播出这段文件（轮播），轮播图如何解决卡顿问题，有手写过轮播图你，原理是什么</li>
+<li>垂直水平居中的方式</li>
+<li>实现三栏布局，中间自适应有几种方法</li>
+<li>算法：给你一个无序数字数组，里面是随机的书，并给出一个目标值，求这个数组的两个数，这个数的和等于目标值，要求这两个数并给出下标，你能想到最优的办法是什么吗（提示：快排，双指针）</li>
+<li>算法：给一个无序的数组，让我分割成m组，这个m组里和最大的一组是所有可能的分割情况最小的（二分答案法）</li>
+<li>webpack的原理</li>
+<li><em>proto</em> 和prototype分别是什么</li>
+<li>原型链原理</li>
+<li>在原型链上Object再往上是什么</li>
+<li>new和Object.create的区别</li>
+<li>哪种情况下__proto__和prototype的指向是同一个？</li>
+<li>typeof array null undefined NaN分别是什么</li>
+<li>把undefined和null转成Number分别是什么</li>
+<li>如何判断是否为数组？（instanceOf和constructor可以，但是有原型链断裂的风险，Object.toString.call()最稳定）</li>
+<li>instanceOf和constructor的区别</li>
+<li>原型链断裂了以后的结果是什么</li>
+<li>如果让你实现一个promise怎么样实现</li>
+<li>如何学前端的，看了哪些书</li>
+<li>博客写了多少篇</li>
+<li>你的技术亮点在哪里</li>
+<li>写一下实现合理化</li>
+<li>你对三大框架的理解是什么</li>
+<li>前端性能理解，优化有哪些</li>
+<li>nodejs了解多少</li>
+<li>你遇到的最有难度的技术问题是什么</li>
+<li>redux原理讲讲</li>
+<li>了解web移动开发吗，移动端适配方案有哪些</li>
+<li>你有Native开发经验吗，讲下Android如何调用页面的资源</li>
+<li>行内元素和块级元素有哪些，img属于什么元素</li>
+<li>margin坍塌</li>
+<li>BFC原理</li>
+<li>写一下清除浮动</li>
+<li>写一下不知道宽高元素垂直水平居中方法</li>
+<li>写一下节点的增删改</li>
+<li>如何获取元素的父节点和兄弟节点</li>
+<li>JS如何获得用户来源（navigator.userAgent）</li>
+<li>跨域方法说一下</li>
+<li>jsonp的原理是什么，处理script标签还可以通过什么实现？（静态资源标签）</li>
+<li>原型链说一下</li>
+<li>谈谈对原型链继承</li>
+<li>前端缓存</li>
+<li>给你一个乱序数组，你怎么样排序</li>
+<li>你的项目有什么亮点</li>
+<li>你的文件上传方案是什么</li>
+<li>写一个方法提取一下search里面的参数</li>
+<li>写一个API实现insertAfter</li>
+<li>CSS3哪些用的比较多</li>
+<li>CSS动画会吗，怎么样用CSS实现一个loading效果</li>
+<li>如何处理CSS兼容问题</li>
+<li>webpack有个插件可以解决css兼容性问题你知道吗（postcss-loader）</li>
+<li>ES6新特性说说</li>
+<li>ES6的代理是什么</li>
+<li>let和var的区别讲讲</li>
+<li>箭头函数和ES5和this的指向区别讲讲</li>
+<li>前端安全这块了解多少</li>
+<li>写一个API，实现jQuery的$(selector)选择器，要求兼容IE6</li>
+<li>浏览器是如何实现通过你的代码去找到指定的元素的</li>
+<li>用JS模拟一个双向链表</li>
+<li>前端工程化思想</li>
+<li>模块化思想</li>
+<li>你为什么选择前端</li>
+<li>cookie，session，localStorage和sessionStorage的区别</li>
+<li>Nodejs的线程管理</li>
+<li>JS设计模式有哪些</li>
+<li>跨域的方法有哪些</li>
+<li>说说bind，apply，call的区别以及bind的实现</li>
+<li>算法：反转二叉树以及时间复杂度</li>
+<li>链表找环</li>
+<li>react的virtual DOM和Diff算法</li>
+<li>React的生命周期</li>
+<li>Vue的生命周期</li>
+<li>boostrap的底层原理</li>
+<li>图片压缩的原理</li>
+<li>如何处理高并发的情况下，用户顺序问题</li>
+<li>说一下web安全，xss，csrf防范</li>
+<li>csrf流程，举例子</li>
+<li>session+cookie的登录机制</li>
+<li>token香港，浏览器缓存</li>
+<li>vue双向绑定原理，vue-loader做了什么</li>
+<li>webpack的插件大致流程</li>
+<li>编程题：给出一个字符串(“obj.a”)，返回对象属性obj.a，类似eval的效果</li>
+<li>前端路由会不会发请求</li>
+<li>画布濡染有了解吗</li>
+<li>前端监控，pm2，如果我服务器挂了，如何快速发现并且定位错误</li>
+<li>pm2除了监控还能干什么，如何实现</li>
+<li>express中间件如何实现</li>
+<li>了解TCP吗，数据结构简单介绍一下以及你的想法</li>
+<li>webpack项目太大了怎么办</li>
+<li>深拷贝</li>
+<li>如果弹出的菜单位置过于贴近边框，如何调整这个元素的位置</li>
+<li>计算50个人至少有2个生日相同的概率</li>
+<li>一个升序数组，求两个元素的和为一个指定数</li>
+<li>vue的生命周期</li>
+<li>vuex的状态管理的原理是什么</li>
+<li>如何在浏览器端和原生端的代码复用，讲到weex又简单讲了它的原理</li>
+<li>跨域如何解决</li>
+<li>前端性能优化问题</li>
+<li>csrf攻击原理以及防御手段</li>
+<li>平衡二叉树</li>
+<li>如何在上亿规模的数据中找到最大的一个数</li>
+<li>最近看过的技术文章和一遍非技术文章（考察表达能力，和主动学习新知识的习惯）</li>
+<li>算法题：二叉树层序遍历</li>
+<li>JS的全排列</li>
+<li>get和post的区别</li>
+<li>301和302的区别</li>
+<li>如何避免301跳转https</li>
+<li>tcp建立连接三次握手的区别</li>
+<li>操作系统进程和线程的区别</li>
+<li>线程的哪些资源共享，哪些资源不共享</li>
+<li>设计模式有哪些</li>
+<li>Linux命令用的多吗，怎么样进行进程间通信</li>
+<li>kill指令了解过吗</li>
+<li>如何画一个三角形</li>
+<li>CSS中对溢出的处理</li>
+<li>CSS选择器有哪些，优先级呢？</li>
+<li>ES6中用过什么</li>
+<li>promise的状态有哪些</li>
+<li>讲讲JS的闭包</li>
+<li>你有用到express吗</li>
+<li>express和koa2的区别</li>
+<li>讲讲JS的语言特性吗</li>
+<li>最近在学啥</li>
+<li>项目用到JAVA，反射来讲</li>
+<li>你用过什么数据库</li>
+<li>MySQL里面的索引用过吗</li>
+<li>B+树了解过吗</li>
+<li>mongoDB有哪些特点</li>
+<li>实现一个两列等高布局，思路</li>
+<li>清除浮动的方法</li>
+<li>如何让一个元素消失</li>
+<li>重排和重绘</li>
+<li>HTTP状态码</li>
+<li>讲讲304</li>
+<li>浏览器缓存机制</li>
+<li>强缓存，协商缓存什么时候用哪个</li>
+<li>如何判断一个数组</li>
+<li>你说到typeof，能不能加一个限制条件typeof只能判断是object，可以判断一下是否拥有数组的方法</li>
+<li>JS的如何实现倒计时，为什么不准，校正方式</li>
+<li>JS实现跨域</li>
+<li>React的特性</li>
+<li>nodejs的时间方法讲讲看</li>
+<li>nodejs的特性，适合处理什么场景</li>
+<li>IO多路复用</li>
+<li>前端优化</li>
+<li>实现一个ajax，兼容</li>
+<li>如何有一个很多的列表，像头条的新闻列表，用户看得多了，列表越来越大，怎么样处理，思考一下</li>
+<li>如果有这样的场景：一个模块A作为输出，BCD等扩展模块可以在A做更改后展示A的原来内容或者驾驶CSS后的内容，想想思路</li>
+<li>同一个网站，在上海打开慢，在北京打开快，怎么样分析原因，（DNS解析和CDN）</li>
+<li>vue react jquery比较，有测试过性能吗</li>
+<li>对大前端的理解，前端会发展怎么样</li>
+<li>算法：两个排序好的数组，怎么样找他的中位数</li>
+<li>React虚拟DOM，生命周期</li>
+<li>react父子通信</li>
+<li>nodejs如何require一个包</li>
+<li>es6和es5的区别</li>
+<li>Nodejs加载原生的包与自己定义的包路径如何查找</li>
+<li>HTTP2.0的优势</li>
+<li>flex弹性布局裂解，移动端适配方案有哪些</li>
+<li>页面缓存</li>
+<li>页面性能优化</li>
+<li>css性能优化，就动画效果，如何从js，cs角度减少回流？</li>
+<li>webpack的plugin和loader的区别</li>
+<li>es5如何转为es5-babel</li>
+<li>了解webpack如何打败</li>
+<li>原型基础</li>
+<li>BFC</li>
+<li>原型链与作用域链</li>
+<li>jQuery的源码看过没</li>
+<li>移动端开发经验</li>
+<li>css会吗</li>
+<li>怎么样学前端</li>
+<li>遇到问题如何解决</li>
+<li>正则如何将一个数千分化表示</li>
+<li>js设计模式知道哪些，单例详细说</li>
+<li>函数式编程-柯里化</li>
+<li>es6的变量定义和es5的区别</li>
+<li>JS事件流</li>
+<li>七层网络协议，每层干嘛的</li>
+<li>tcp三次握手，四次挥手</li>
+<li>排序算法有哪些，时间复杂度，选择排序怎么样搞</li>
+<li>数据结构有哪些，红黑树和二叉树的区别，二叉搜索树与二叉平衡树</li>
+<li>项目经验</li>
+<li>树数据多少非常多怎么样办（懒加载）</li>
+<li>页面优化方法</li>
+<li>设计模式</li>
+<li>cookie和session的却别</li>
+<li>如果现在重新做这个项目，有什么想优化的</li>
+<li>多长时间开始独立做前端，这段时间是如何学习的</li>
+<li>学习生涯最失败的事情是什么，怎么样走出来的</li>
+<li>如何看待竞争</li>
+<li>项目里最难的事情，如何克服</li>
+<li>职业规范是怎么样的</li>
+<li>是独生子女吗</li>
+<li>别人对你的项目认可度，项目做的怎么样</li>
+<li>block元素和inline元素的区别</li>
+<li>position有哪些，特性</li>
+<li>css选择器有哪些</li>
+<li>es5和es6：let，const打包后如何变-块级作用域</li>
+<li>JS基本数据类型</li>
+<li>作用域链</li>
+<li>递归</li>
+<li>react生命周期</li>
+<li>react通信机制</li>
+<li>js事件流</li>
+<li>redux</li>
+<li>flex弹性布局</li>
+<li>this</li>
+<li>promise如何从then转为catch的</li>
+<li>介绍你做过的项目</li>
+<li>promise函数</li>
+<li>es6模块新特性</li>
+<li>浏览器内存泄露，闭包内存泄露如何解决</li>
+<li>怎么样让页面加载更快</li>
+<li>兼容过IE的方法</li>
+<li>缓存</li>
+<li>会pc换还是移动端</li>
+<li>观察者模式如何实现</li>
+<li>行元素，块级元素的却别</li>
+<li>css选择器的优先级</li>
+<li>水平垂直居中布局</li>
+<li>前端性能优化</li>
+<li>闭包的概念，平时如何实现</li>
+<li>es6的特性以及这些特性如何实现的</li>
+<li>事件冒泡，事件捕获，事件委托的原理，如何实现委托，事件，委托的有点是什么，事件监听</li>
+<li>输入URL浏览器是如何工作的</li>
+<li>requirejs组件化</li>
+<li>jQuery和vue的区别</li>
+<li>vue的特点</li>
+<li>vue的双向绑定原理</li>
+<li>谈谈js设计模式</li>
+<li>如何实现订阅者发者模式</li>
+<li>MVVM实现原理</li>
+<li>vue生命周期</li>
+<li>vue跨组件通信实现</li>
+<li>vue的props和slot的使用，区别</li>
+<li>vuex的原理</li>
+<li>详细说明解决跨域的方式</li>
+<li>前端安全（资源枚举，XSS共计，DOS攻击，CSRF攻击）</li>
+<li>HTTP状态码</li>
+<li>重排重绘</li>
+<li>谈谈JS的异步机制</li>
+<li>项目中是是如何优化页面的</li>
+<li>如何实现移动端布局，适配方案</li>
+<li>call apply bind的区别</li>
+<li>深拷贝的实现</li>
+<li>jQuery原理，平时用jQuery都做过什么</li>
+<li>用过webpack吗，谈一下webpack打包</li>
+<li>给了一个settimeout代码输出的顺序</li>
+<li>git命令</li>
+<li>Linux命令</li>
+<li>JS基础有几种</li>
+<li>流式布局</li>
+<li>对前端的了解和个人规划</li>
+<li>html5的新特性</li>
+<li>float和position的区别</li>
+<li>如何获取当前日期</li>
+<li>html语义化，好处</li>
+<li>计算器</li>
+<li>清除浮动</li>
+<li>盒子模型</li>
+<li>border-box和content-box</li>
+<li>css伪元素有哪些</li>
+<li>打开连接到网页呈现的流程</li>
+<li>HTTP请求头，响应头里面有哪些</li>
+<li>异步加载JS</li>
+<li>JS原型</li>
+<li>看哪些技术网站</li>
+<li>觉得自己的不足</li>
+<li>cookie实现</li>
+<li>cookie长度限制</li>
+<li>http状态码</li>
+<li>301 302</li>
+<li>性能优化</li>
+<li>一个网页很多很多页面，怎么样让用户体验好一点</li>
+<li>一个项目可能要延期，怎么样处理</li>
+<li>URL长度限制</li>
+<li>缓存</li>
+<li>什么时候用local，什么时候用session和 storage</li>
+<li>长连接</li>
+<li>有没有抓过包</li>
+<li>有没有用过代理</li>
+<li>DNS</li>
+<li>图片压缩</li>
+<li>gzip</li>
+<li>浏览器兼容</li>
+<li>webpack css兼容</li>
+<li>css性能</li>
+<li>垂直居中，水平居中</li>
+<li>盒子米线</li>
+<li>last-modifined，etg怎么样判断</li>
+<li>css动画优化</li>
+<li>401状态码</li>
+<li>reflow和repaint</li>
+<li>应用层协议有哪些</li>
+<li>TCP和UDP</li>
+<li>有哪些状态码</li>
+<li>Ajax如何实现的</li>
+<li>Ajax返回204算是成功吗</li>
+<li>settimeout异步</li>
+<li>tcp ip分成</li>
+<li>vue diff算法</li>
+<li>vue的生命周期</li>
+<li>pwa</li>
+<li>vue-router不能解决情况和边界情况</li>
+<li>transition生命周期</li>
+<li>线程和进程的区别</li>
+<li>什么是异步</li>
+<li>promise是如何解析异步操作的</li>
+<li>如果给a,b,c,d四个时间，执行时间分别为1，2，3，4，怎么样做才能在abc都在执行完后再执行d，除了使用promise还能使用什么方法</li>
+<li>数组去重方法</li>
+<li>函数节流和函数防抖知道吗，区别是什么</li>
+<li>TCP和UDP的区别</li>
+<li>HTTP1.0和HTTP1.1相关我让你听</li>
+<li>强缓存和协商缓存知道吗</li>
+<li>为什么HTTP1.1中使用Cache-Control代替Expires</li>
+<li>HTTP1.1中Etg和f-None-Match哪个权重比较大</li>
+<li>排序的几种方法知道吗，是如何实现的</li>
+<li>栈和队列有什么区别，具体的应用场景</li>
+<li>hashmap原理</li>
+<li>react中props和state的区别</li>
+<li>组件怎么样拿到redux的数据</li>
+<li>给你一个DOM元素，用CSS的方式让他呈现两个的想过，只有一个DOM元素</li>
+<li>一个数组只有1和2，排序，1在前面，2在后面</li>
+<li>js事件模型，捕获和冒泡，阻止冒泡</li>
+<li>preventDefault和stopPropagation的区别</li>
+<li>HTTP缓存</li>
+<li>https</li>
+<li>react的事件绑定和原生有什么区别吗</li>
+<li>一个数组，有很多数字存在2次，只有一个数字寸一次，怎么样找出这个数字</li>
+<li>关于iframe内部和外部变量的读取是如何的</li>
+<li>前端防连击throttle和debounce</li>
+<li>ES6 generator async/await了解吗</li>
+<li>HTTP/2有什么新特性</li>
+<li>哈希的原理</li>
+<li>如何反转链表</li>
+<li>二叉搜索树的原理</li>
+<li>给定两个文本文件，找出他们中相同的行都有哪些</li>
+<li>对JS单线程的理解</li>
+<li>页面共享数据的方法有哪些</li>
+<li>amd，cmd规范</li>
+<li>用户页面打开很慢，有哪些优化方式</li>
+<li>react的虚拟DOM了解什么，这些类型的框架和传统的jd操作dom的优势</li>
+<li>koa generator能讲一下吗</li>
+<li>如何做单侧，单侧和开发占比应该是多少</li>
+<li>hybrid</li>
+<li>v-model参数</li>
+<li>mvvm，mvc，mvp区别</li>
+<li>cdn</li>
+<li>网络安全xss，csfr是什么，怎么样解决安全</li>
+<li>https怎么样校验证书有效性</li>
+<li>websocket协议，nodejs中有哪些实现了这个协议</li>
+<li>TCP/IP体系结构以及每层的主要协议</li>
+<li>TCP的三次握手</li>
+<li>HTTP各版本比较</li>
+<li>数据结构学过什么</li>
+<li>js如何实现一个栈</li>
+<li>哈希表是怎么样的结构</li>
+<li>说说操作系统的内存管理</li>
+<li>怎么样实现一个服务器</li>
+<li>如何删除一个dom节点</li>
+<li>浏览器如何渲染页面的</li>
+<li>GitHub的项目问</li>
+<li>看过什么书</li>
+<li>你是如何理解HTML语义化的</li>
+<li>HTML的黑钻模型有哪些构成的，盒子模型有哪些，默认是哪些</li>
+<li>盒子模型有没有办法把宽度设置为包含padding</li>
+<li>浮动元素有没有什么特性</li>
+<li>清除浮动的所有方法</li>
+<li>ji基本数据类型</li>
+<li>typeof去判断数据类型返回值有哪些</li>
+<li>说说事件代理利用的是什么原理</li>
+<li>阻止冒泡的函数是什么</li>
+<li>cookie有什么特征</li>
+<li>加入访问http://A.com存进了一个cookie，在另外一个页面用ajax向A的域名发请求会携带cookie吗</li>
+<li>cookie的其他解决方案</li>
+<li>localStorage存储数据格式是什么</li>
+<li>怎么样把一个数组存进localSorage</li>
+<li>storage有哪些存储方法</li>
+<li>html5有哪些新的特性</li>
+<li>假设两台电脑之间同步画板如何实现</li>
+<li>promise的两个方法，具体实现</li>
+<li>es6用的多的有哪些</li>
+<li>箭头函数</li>
+<li>如果一个页面做辛夷花，从哪些方面考察，从哪些地方优化</li>
+<li>vue开发模式和jQuery模式有哪些不同，有哪些优缺点</li>
+<li>假设一个object A里面的值n为1，怎么样知道n改变了，有事件绑定吗</li>
+<li>react是如何实现数据绑定的</li>
+<li>给数字加千位分隔符</li>
+<li>HTTP1 SPDY HTTP2的对比</li>
+<li>webkit内核渲染页面过程</li>
+<li>简单介绍一下backbone</li>
+<li>react首次渲染过程</li>
+<li>redux和vuex的区别</li>
+<li>了解过weex吗</li>
+<li>typescript和es6的区别</li>
+<li>知道xss吗，介绍一下，如何避免</li>
+<li>跨域方式</li>
+<li>如何理解html语义化</li>
+<li>浏览器如何处理未知的的tab</li>
+<li>html5有什么新的tag，canvas…</li>
+<li>nodejs的优势，用过nodejs的哪些模块</li>
+<li>预约系统如何解决高并发的问题</li>
+<li>kut如何优化react的diff，有去提pr吗，为什么</li>
+<li>简单说一下ICP UDP</li>
+<li>Socks5代理是如何实现的，读过协议吗</li>
+<li>http状态码，307是什么，401和403的区别</li>
+<li>酸酸是如何实现穿墙的</li>
+<li>如何实现文件上传的功能</li>
+<li>垂直居中的实现</li>
+<li>react和vue的区别</li>
+<li>介绍一下盒子模型</li>
+<li>实现css动画有哪些</li>
+<li>jsonp如何实现，过程</li>
+<li>知道哪些http状态码</li>
+<li>200和304实现缓存的区别</li>
+<li>localstorage和cookie的区别，如何设置cookie</li>
+<li>表单提交和ajax的区别</li>
+<li>calc属性</li>
+<li>symbol</li>
+<li>事件监听</li>
+<li>常见的请求方式</li>
+<li>tcp和http的区别</li>
+<li>css的定位属性，怎么样定位的</li>
+<li>情景题：给你一个ul列表，找到点击的li对象，把点击到的对象的字符串翻转，讲出思路并且写出代码</li>
+<li>只能用获取到对象的属性</li>
+<li>小程序的生命周期</li>
+<li>小程序的Onlaunch周期不支持同步获取信息之后再执行到下一个生命周期</li>
+<li>你怎么样维持用户登录状态的</li>
+<li>给你一颗树，如何找到其公共的父节点</li>
+<li>你最荣耀的事情</li>
+<li>你怎么样知道我们公司的，为什么来我们公司</li>
+<li>rem，px，em的区别</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../前端/前端.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../前端/前端.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

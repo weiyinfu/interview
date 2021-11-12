@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>计算机网络-链路层.md - 面试</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">1.</strong> C++</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../C++/C++面试题.html"><strong aria-hidden="true">1.1.</strong> C++面试题.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">2.</strong> 系统设计</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../系统设计/短链接服务.html"><strong aria-hidden="true">2.1.</strong> 短链接服务.md</a></li><li class="chapter-item expanded "><a href="../系统设计/系统设计基础.html"><strong aria-hidden="true">2.2.</strong> 系统设计基础.md</a></li><li class="chapter-item expanded "><a href="../系统设计/工程设计.html"><strong aria-hidden="true">2.3.</strong> 工程设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/两个文件URL去重.html"><strong aria-hidden="true">2.4.</strong> 两个文件URL去重.md</a></li><li class="chapter-item expanded "><a href="../系统设计/关注关系设计.html"><strong aria-hidden="true">2.5.</strong> 关注关系设计.md</a></li><li class="chapter-item expanded "><a href="../系统设计/秒杀系统.html"><strong aria-hidden="true">2.6.</strong> 秒杀系统.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">3.</strong> 操作系统</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-死锁.html"><strong aria-hidden="true">3.1.</strong> 计算机操作系统-死锁.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-概述.html"><strong aria-hidden="true">3.2.</strong> 计算机操作系统-概述.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-内存管理.html"><strong aria-hidden="true">3.3.</strong> 计算机操作系统-内存管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/Linux.html"><strong aria-hidden="true">3.4.</strong> Linux.md</a></li><li class="chapter-item expanded "><a href="../操作系统/进程与线程通信方式.html"><strong aria-hidden="true">3.5.</strong> 进程与线程通信方式.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-链接.html"><strong aria-hidden="true">3.6.</strong> 计算机操作系统-链接.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-设备管理.html"><strong aria-hidden="true">3.7.</strong> 计算机操作系统-设备管理.md</a></li><li class="chapter-item expanded "><a href="../操作系统/计算机操作系统-进程管理.html"><strong aria-hidden="true">3.8.</strong> 计算机操作系统-进程管理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">4.</strong> 算法</a></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">5.</strong> redis</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../redis/Redis.html"><strong aria-hidden="true">5.1.</strong> Redis.md</a></li><li class="chapter-item expanded "><a href="../redis/Redis21问.html"><strong aria-hidden="true">5.2.</strong> Redis21问.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">6.</strong> 网络安全</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../网络安全/攻击技术.html"><strong aria-hidden="true">6.1.</strong> 攻击技术.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">7.</strong> 数据库</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../数据库/分库分表.html"><strong aria-hidden="true">7.1.</strong> 分库分表.md</a></li><li class="chapter-item expanded "><a href="../数据库/MySQL.html"><strong aria-hidden="true">7.2.</strong> MySQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/SQL.html"><strong aria-hidden="true">7.3.</strong> SQL.md</a></li><li class="chapter-item expanded "><a href="../数据库/缓存.html"><strong aria-hidden="true">7.4.</strong> 缓存.md</a></li><li class="chapter-item expanded "><a href="../数据库/数据库系统原理.html"><strong aria-hidden="true">7.5.</strong> 数据库系统原理.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">8.</strong> java</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../java/JavaIO.html"><strong aria-hidden="true">8.1.</strong> JavaIO.md</a></li><li class="chapter-item expanded "><a href="../java/Java并发.html"><strong aria-hidden="true">8.2.</strong> Java并发.md</a></li><li class="chapter-item expanded "><a href="../java/Java面试题.html"><strong aria-hidden="true">8.3.</strong> Java面试题.md</a></li><li class="chapter-item expanded "><a href="../java/Java基础.html"><strong aria-hidden="true">8.4.</strong> Java基础.md</a></li><li class="chapter-item expanded "><a href="../java/Java容器.html"><strong aria-hidden="true">8.5.</strong> Java容器.md</a></li><li class="chapter-item expanded "><a href="../java/Java虚拟机.html"><strong aria-hidden="true">8.6.</strong> Java虚拟机.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">9.</strong> 计算机网络</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../计算机网络/HTTP.html"><strong aria-hidden="true">9.1.</strong> HTTP.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-网络层.html"><strong aria-hidden="true">9.2.</strong> 计算机网络-网络层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-应用层.html"><strong aria-hidden="true">9.3.</strong> 计算机网络-应用层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-概述.html"><strong aria-hidden="true">9.4.</strong> 计算机网络-概述.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/Socket.html"><strong aria-hidden="true">9.5.</strong> Socket.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/TCP和UDP的区别.html"><strong aria-hidden="true">9.6.</strong> TCP和UDP的区别.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-物理层.html"><strong aria-hidden="true">9.7.</strong> 计算机网络-物理层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-链路层.html" class="active"><strong aria-hidden="true">9.8.</strong> 计算机网络-链路层.md</a></li><li class="chapter-item expanded "><a href="../计算机网络/计算机网络-传输层.html"><strong aria-hidden="true">9.9.</strong> 计算机网络-传输层.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">10.</strong> 常识</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../常识/微服务.html"><strong aria-hidden="true">10.1.</strong> 微服务.md</a></li><li class="chapter-item expanded "><a href="../常识/Python.html"><strong aria-hidden="true">10.2.</strong> Python.md</a></li><li class="chapter-item expanded "><a href="../常识/大数据.html"><strong aria-hidden="true">10.3.</strong> 大数据.md</a></li><li class="chapter-item expanded "><a href="../常识/正则表达式.html"><strong aria-hidden="true">10.4.</strong> 正则表达式.md</a></li><li class="chapter-item expanded "><a href="../常识/构建工具.html"><strong aria-hidden="true">10.5.</strong> 构建工具.md</a></li><li class="chapter-item expanded "><a href="../常识/面向对象思想.html"><strong aria-hidden="true">10.6.</strong> 面向对象思想.md</a></li><li class="chapter-item expanded "><a href="../常识/分布式.html"><strong aria-hidden="true">10.7.</strong> 分布式.md</a></li><li class="chapter-item expanded "><a href="../常识/结集.html"><strong aria-hidden="true">10.8.</strong> 结集.md</a></li><li class="chapter-item expanded "><a href="../常识/代码风格规范.html"><strong aria-hidden="true">10.9.</strong> 代码风格规范.md</a></li><li class="chapter-item expanded "><a href="../常识/简历的重要性.html"><strong aria-hidden="true">10.10.</strong> 简历的重要性.md</a></li><li class="chapter-item expanded "><a href="../常识/消息队列.html"><strong aria-hidden="true">10.11.</strong> 消息队列.md</a></li><li class="chapter-item expanded "><a href="../常识/腾讯面试合集.html"><strong aria-hidden="true">10.12.</strong> 腾讯面试合集.md</a></li><li class="chapter-item expanded "><a href="../常识/常用组件.html"><strong aria-hidden="true">10.13.</strong> 常用组件.md</a></li><li class="chapter-item expanded "><a href="../常识/数据结构与算法.html"><strong aria-hidden="true">10.14.</strong> 数据结构与算法.md</a></li><li class="chapter-item expanded "><a href="../常识/计算机基础.html"><strong aria-hidden="true">10.15.</strong> 计算机基础.md</a></li><li class="chapter-item expanded "><a href="../常识/Git.html"><strong aria-hidden="true">10.16.</strong> Git.md</a></li><li class="chapter-item expanded "><a href="../常识/代码可读性.html"><strong aria-hidden="true">10.17.</strong> 代码可读性.md</a></li><li class="chapter-item expanded "><a href="../常识/Docker.html"><strong aria-hidden="true">10.18.</strong> Docker.md</a></li><li class="chapter-item expanded "><a href="../常识/阿里面试题合集.html"><strong aria-hidden="true">10.19.</strong> 阿里面试题合集.md</a></li><li class="chapter-item expanded "><a href="../常识/集群.html"><strong aria-hidden="true">10.20.</strong> 集群.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">11.</strong> 设计模式</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../设计模式/设计模式-简单工厂.html"><strong aria-hidden="true">11.1.</strong> 设计模式-简单工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-代理.html"><strong aria-hidden="true">11.2.</strong> 设计模式-代理.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-外观.html"><strong aria-hidden="true">11.3.</strong> 设计模式-外观.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式.html"><strong aria-hidden="true">11.4.</strong> 设计模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-观察者.html"><strong aria-hidden="true">11.5.</strong> 设计模式-观察者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-装饰.html"><strong aria-hidden="true">11.6.</strong> 设计模式-装饰.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-迭代器.html"><strong aria-hidden="true">11.7.</strong> 设计模式-迭代器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-组合.html"><strong aria-hidden="true">11.8.</strong> 设计模式-组合.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-状态.html"><strong aria-hidden="true">11.9.</strong> 设计模式-状态.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-单例.html"><strong aria-hidden="true">11.10.</strong> 设计模式-单例.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-抽象工厂.html"><strong aria-hidden="true">11.11.</strong> 设计模式-抽象工厂.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-生成器.html"><strong aria-hidden="true">11.12.</strong> 设计模式-生成器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-策略.html"><strong aria-hidden="true">11.13.</strong> 设计模式-策略.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-命令.html"><strong aria-hidden="true">11.14.</strong> 设计模式-命令.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-桥接.html"><strong aria-hidden="true">11.15.</strong> 设计模式-桥接.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-工厂方法.html"><strong aria-hidden="true">11.16.</strong> 设计模式-工厂方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-中介者.html"><strong aria-hidden="true">11.17.</strong> 设计模式-中介者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-访问者.html"><strong aria-hidden="true">11.18.</strong> 设计模式-访问者.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-空对象.html"><strong aria-hidden="true">11.19.</strong> 设计模式-空对象.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-备忘录.html"><strong aria-hidden="true">11.20.</strong> 设计模式-备忘录.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-模板方法.html"><strong aria-hidden="true">11.21.</strong> 设计模式-模板方法.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-适配器.html"><strong aria-hidden="true">11.22.</strong> 设计模式-适配器.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-责任链.html"><strong aria-hidden="true">11.23.</strong> 设计模式-责任链.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-享元.html"><strong aria-hidden="true">11.24.</strong> 设计模式-享元.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-原型模式.html"><strong aria-hidden="true">11.25.</strong> 设计模式-原型模式.md</a></li><li class="chapter-item expanded "><a href="../设计模式/设计模式-解释器.html"><strong aria-hidden="true">11.26.</strong> 设计模式-解释器.md</a></li></ol></li><li class="chapter-item expanded "><a href="../SUMMARY.html"><strong aria-hidden="true">12.</strong> 前端</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../前端/前端.html"><strong aria-hidden="true">12.1.</strong> 前端.md</a></li><li class="chapter-item expanded "><a href="../前端/前端工程师210问.html"><strong aria-hidden="true">12.2.</strong> 前端工程师210问.md</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">面试</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!-- GFM-TOC -->
+<ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E9%97%AE%E9%A2%98">基本问题</a>
+<ul>
+<li><a href="#1-%E5%B0%81%E8%A3%85%E6%88%90%E5%B8%A7">1. 封装成帧</a></li>
+<li><a href="#2-%E9%80%8F%E6%98%8E%E4%BC%A0%E8%BE%93">2. 透明传输</a></li>
+<li><a href="#3-%E5%B7%AE%E9%94%99%E6%A3%80%E6%B5%8B">3. 差错检测</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E9%81%93%E5%88%86%E7%B1%BB">信道分类</a>
+<ul>
+<li><a href="#1-%E5%B9%BF%E6%92%AD%E4%BF%A1%E9%81%93">1. 广播信道</a></li>
+<li><a href="#2-%E7%82%B9%E5%AF%B9%E7%82%B9%E4%BF%A1%E9%81%93">2. 点对点信道</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%A1%E9%81%93%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF">信道复用技术</a>
+<ul>
+<li><a href="#1-%E9%A2%91%E5%88%86%E5%A4%8D%E7%94%A8">1. 频分复用</a></li>
+<li><a href="#2-%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8">2. 时分复用</a></li>
+<li><a href="#3-%E7%BB%9F%E8%AE%A1%E6%97%B6%E5%88%86%E5%A4%8D%E7%94%A8">3. 统计时分复用</a></li>
+<li><a href="#4-%E6%B3%A2%E5%88%86%E5%A4%8D%E7%94%A8">4. 波分复用</a></li>
+<li><a href="#5-%E7%A0%81%E5%88%86%E5%A4%8D%E7%94%A8">5. 码分复用</a></li>
+</ul>
+</li>
+<li><a href="#csmacd-%E5%8D%8F%E8%AE%AE">CSMA/CD 协议</a></li>
+<li><a href="#ppp-%E5%8D%8F%E8%AE%AE">PPP 协议</a></li>
+<li><a href="#mac-%E5%9C%B0%E5%9D%80">MAC 地址</a></li>
+<li><a href="#%E5%B1%80%E5%9F%9F%E7%BD%91">局域网</a></li>
+<li><a href="#%E4%BB%A5%E5%A4%AA%E7%BD%91">以太网</a></li>
+<li><a href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA">交换机</a></li>
+<li><a href="#%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91">虚拟局域网</a></li>
+</ul>
+<!-- GFM-TOC -->
+<h1><a class="header" href="#基本问题" id="基本问题">基本问题</a></h1>
+<h2><a class="header" href="#1-封装成帧" id="1-封装成帧">1. 封装成帧</a></h2>
+<p>将网络层传下来的分组添加首部和尾部，用于标记帧的开始和结束。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/29a14735-e154-4f60-9a04-c9628e5d09f4.png" width="300"/> </div><br>
+<h2><a class="header" href="#2-透明传输" id="2-透明传输">2. 透明传输</a></h2>
+<p>透明表示一个实际存在的事物看起来好像不存在一样。</p>
+<p>帧使用首部和尾部进行定界，如果帧的数据部分含有和首部尾部相同的内容，那么帧的开始和结束位置就会被错误的判定。需要在数据部分出现首部尾部相同的内容前面插入转义字符。如果数据部分出现转义字符，那么就在转义字符前面再加个转义字符。在接收端进行处理之后可以还原出原始数据。这个过程透明传输的内容是转义字符，用户察觉不到转义字符的存在。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e738a3d2-f42e-4755-ae13-ca23497e7a97.png" width="500"/> </div><br>
+<h2><a class="header" href="#3-差错检测" id="3-差错检测">3. 差错检测</a></h2>
+<p>目前数据链路层广泛使用了循环冗余检验（CRC）来检查比特差错。</p>
+<h1><a class="header" href="#信道分类" id="信道分类">信道分类</a></h1>
+<h2><a class="header" href="#1-广播信道" id="1-广播信道">1. 广播信道</a></h2>
+<p>一对多通信，一个节点发送的数据能够被广播信道上所有的节点接收到。</p>
+<p>所有的节点都在同一个广播信道上发送数据，因此需要有专门的控制方法进行协调，避免发生冲突（冲突也叫碰撞）。</p>
+<p>主要有两种控制方法进行协调，一个是使用信道复用技术，一是使用 CSMA/CD 协议。</p>
+<h2><a class="header" href="#2-点对点信道" id="2-点对点信道">2. 点对点信道</a></h2>
+<p>一对一通信。</p>
+<p>因为不会发生碰撞，因此也比较简单，使用 PPP 协议进行控制。</p>
+<h1><a class="header" href="#信道复用技术" id="信道复用技术">信道复用技术</a></h1>
+<h2><a class="header" href="#1-频分复用" id="1-频分复用">1. 频分复用</a></h2>
+<p>频分复用的所有主机在相同的时间占用不同的频率带宽资源。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/4aa5e057-bc57-4719-ab57-c6fbc861c505.png" width="350"/> </div><br>
+<h2><a class="header" href="#2-时分复用" id="2-时分复用">2. 时分复用</a></h2>
+<p>时分复用的所有主机在不同的时间占用相同的频率带宽资源。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/67582ade-d44a-46a6-8757-3c1296cc1ef9.png" width="350"/> </div><br>
+<p>使用频分复用和时分复用进行通信，在通信的过程中主机会一直占用一部分信道资源。但是由于计算机数据的突发性质，通信过程没必要一直占用信道资源而不让出给其它用户使用，因此这两种方式对信道的利用率都不高。</p>
+<h2><a class="header" href="#3-统计时分复用" id="3-统计时分复用">3. 统计时分复用</a></h2>
+<p>是对时分复用的一种改进，不固定每个用户在时分复用帧中的位置，只要有数据就集中起来组成统计时分复用帧然后发送。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/6283be2a-814a-4a10-84bf-9592533fe6bc.png" width="350"/> </div><br>
+<h2><a class="header" href="#4-波分复用" id="4-波分复用">4. 波分复用</a></h2>
+<p>光的频分复用。由于光的频率很高，因此习惯上用波长而不是频率来表示所使用的光载波。</p>
+<h2><a class="header" href="#5-码分复用" id="5-码分复用">5. 码分复用</a></h2>
+<p>为每个用户分配 m bit 的码片，并且所有的码片正交，对于任意两个码片 <img src="https://latex.codecogs.com/gif.latex?\vec{S}" class="mathjax-pic"/> 和 <img src="https://latex.codecogs.com/gif.latex?\vec{T}" class="mathjax-pic"/> 有</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{m}\vec{S}\cdot\vec{T}=0" class="mathjax-pic"/></div> <br> -->
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/308a02e9-3346-4251-8c41-bd5536dab491.png" width="100px"> </div><br>
+<p>为了讨论方便，取 m=8，设码片 <img src="https://latex.codecogs.com/gif.latex?\vec{S}" class="mathjax-pic"/> 为 00011011。在拥有该码片的用户发送比特 1 时就发送该码片，发送比特 0 时就发送该码片的反码 11100100。</p>
+<p>在计算时将 00011011 记作 (-1 -1 -1 +1 +1 -1 +1 +1)，可以得到</p>
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{m}\vec{S}\cdot\vec{S}=1" class="mathjax-pic"/></div> <br> -->
+<!-- <div align="center"><img src="https://latex.codecogs.com/gif.latex?\frac{1}{m}\vec{S}\cdot\vec{S'}=-1" class="mathjax-pic"/></div> <br> -->
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/6fda1dc7-5c74-49c1-bb79-237a77e43a43.png" width="100px"> </div><br>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e325a903-f0b1-4fbd-82bf-88913dc2f290.png" width="125px"> </div><br>
+<p>其中 <img src="https://latex.codecogs.com/gif.latex?\vec{S'}" class="mathjax-pic"/> 为 <img src="https://latex.codecogs.com/gif.latex?\vec{S}" class="mathjax-pic"/> 的反码。</p>
+<p>利用上面的式子我们知道，当接收端使用码片 <img src="https://latex.codecogs.com/gif.latex?\vec{S}" class="mathjax-pic"/> 对接收到的数据进行内积运算时，结果为 0 的是其它用户发送的数据，结果为 1 的是用户发送的比特 1，结果为 -1 的是用户发送的比特 0。</p>
+<p>码分复用需要发送的数据量为原先的 m 倍。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/99b6060e-099d-4201-8e86-f8ab3768a7cf.png" width="500px"> </div><br>
+<h1><a class="header" href="#csmacd-协议" id="csmacd-协议">CSMA/CD 协议</a></h1>
+<p>CSMA/CD 表示载波监听多点接入 / 碰撞检测。</p>
+<ul>
+<li><strong>多点接入</strong>  ：说明这是总线型网络，许多主机以多点的方式连接到总线上。</li>
+<li><strong>载波监听</strong>  ：每个主机都必须不停地监听信道。在发送前，如果监听到信道正在使用，就必须等待。</li>
+<li><strong>碰撞检测</strong>  ：在发送中，如果监听到信道已有其它主机正在发送数据，就表示发生了碰撞。虽然每个主机在发送数据之前都已经监听到信道为空闲，但是由于电磁波的传播时延的存在，还是有可能会发生碰撞。</li>
+</ul>
+<p>记端到端的传播时延为 τ，最先发送的站点最多经过 2τ 就可以知道是否发生了碰撞，称 2τ 为   <strong>争用期</strong>  。只有经过争用期之后还没有检测到碰撞，才能肯定这次发送不会发生碰撞。</p>
+<p>当发生碰撞时，站点要停止发送，等待一段时间再发送。这个时间采用   <strong>截断二进制指数退避算法</strong>   来确定。从离散的整数集合 {0, 1, .., (2<sup>k</sup>-1)} 中随机取出一个数，记作 r，然后取 r 倍的争用期作为重传等待时间。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/19d423e9-74f7-4c2b-9b97-55890e0d5193.png" width="400"/> </div><br>
+<h1><a class="header" href="#ppp-协议" id="ppp-协议">PPP 协议</a></h1>
+<p>互联网用户通常需要连接到某个 ISP 之后才能接入到互联网，PPP 协议是用户计算机和 ISP 进行通信时所使用的数据链路层协议。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e1ab9f28-cb15-4178-84b2-98aad87f9bc8.jpg" width="300"/> </div><br>
+<p>PPP 的帧格式：</p>
+<ul>
+<li>F 字段为帧的定界符</li>
+<li>A 和 C 字段暂时没有意义</li>
+<li>FCS 字段是使用 CRC 的检验序列</li>
+<li>信息部分的长度不超过 1500</li>
+</ul>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/759013d7-61d8-4509-897a-d75af598a236.png" width="400"/> </div><br>
+<h1><a class="header" href="#mac-地址" id="mac-地址">MAC 地址</a></h1>
+<p>MAC 地址是链路层地址，长度为 6 字节（48 位），用于唯一标识网络适配器（网卡）。</p>
+<p>一台主机拥有多少个网络适配器就有多少个 MAC 地址。例如笔记本电脑普遍存在无线网络适配器和有线网络适配器，因此就有两个 MAC 地址。</p>
+<h1><a class="header" href="#局域网" id="局域网">局域网</a></h1>
+<p>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限。</p>
+<p>主要有以太网、令牌环网、FDDI 和 ATM 等局域网技术，目前以太网占领着有线局域网市场。</p>
+<p>可以按照网络拓扑结构对局域网进行分类：</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/807f4258-dba8-4c54-9c3c-a707c7ccffa2.jpg" width="800"/> </div><br>
+<h1><a class="header" href="#以太网" id="以太网">以太网</a></h1>
+<p>以太网是一种星型拓扑结构局域网。</p>
+<p>早期使用集线器进行连接，集线器是一种物理层设备， 作用于比特而不是帧，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离，之后再将这个比特发送到其它所有接口。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</p>
+<p>目前以太网使用交换机替代了集线器，交换机是一种链路层设备，它不会发生碰撞，能根据 MAC 地址进行存储转发。</p>
+<p>以太网帧格式：</p>
+<ul>
+<li><strong>类型</strong>  ：标记上层使用的协议；</li>
+<li><strong>数据</strong>  ：长度在 46-1500 之间，如果太小则需要填充；</li>
+<li><strong>FCS</strong>  ：帧检验序列，使用的是 CRC 检验方法；</li>
+</ul>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/164944d3-bbd2-4bb2-924b-e62199c51b90.png" width="500"/> </div><br>
+<h1><a class="header" href="#交换机" id="交换机">交换机</a></h1>
+<p>交换机具有自学习能力，学习的是交换表的内容，交换表中存储着 MAC 地址到接口的映射。</p>
+<p>正是由于这种自学习能力，因此交换机是一种即插即用设备，不需要网络管理员手动配置交换表内容。</p>
+<p>下图中，交换机有 4 个接口，主机 A 向主机 B 发送数据帧时，交换机把主机 A 到接口 1 的映射写入交换表中。为了发送数据帧到 B，先查交换表，此时没有主机 B 的表项，那么主机 A 就发送广播帧，主机 C 和主机 D 会丢弃该帧，主机 B 回应该帧向主机 A 发送数据包时，交换机查找交换表得到主机 A 映射的接口为 1，就发送数据帧到接口 1，同时交换机添加主机 B 到接口 2 的映射。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/a4444545-0d68-4015-9a3d-19209dc436b3.png" width="800"/> </div><br>
+<h1><a class="header" href="#虚拟局域网" id="虚拟局域网">虚拟局域网</a></h1>
+<p>虚拟局域网可以建立与物理位置无关的逻辑组，只有在同一个虚拟局域网中的成员才会收到链路层广播信息。</p>
+<p>例如下图中 (A1, A2, A3, A4) 属于一个虚拟局域网，A1 发送的广播会被 A2、A3、A4 收到，而其它站点收不到。</p>
+<p>使用 VLAN 干线连接来建立虚拟局域网，每台交换机上的一个特殊接口被设置为干线接口，以互连 VLAN 交换机。IEEE 定义了一种扩展的以太网帧格式 802.1Q，它在标准以太网帧上加进了 4 字节首部 VLAN 标签，用于表示该帧属于哪一个虚拟局域网。</p>
+<div align="center"> <img src="https://cs-notes-1256109796.cos.ap-guangzhou.myqcloud.com/e98e9d20-206b-4533-bacf-3448d0096f38.png" width="500"/> </div><br>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../计算机网络/计算机网络-物理层.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../计算机网络/计算机网络-传输层.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../计算机网络/计算机网络-物理层.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../计算机网络/计算机网络-传输层.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
