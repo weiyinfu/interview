@@ -9,3 +9,4 @@
 * 太子敖丙Java面试教程：https://github.com/AobingJava/JavaFamily
 * 博客园Java面试题：https://www.cnblogs.com/javazhiyin/tag/Java%E9%9D%A2%E8%AF%95%E9%A2%98/
 * 辉哈C++面试题：https://github.com/huihut/interview  https://interview.huihut.com/#/
+* 各大公司技术架构演进：https://juejin.cn/post/6844903782350848008
