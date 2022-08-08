@@ -63,3 +63,9 @@ term（任期）以选举（election）开始，然后就是一段或长或短�
 * raft github.io：https://raft.github.io/
 * raft PPT：https://web.stanford.edu/~ouster/cgi-bin/papers/raft-atc14
 * raft 博客：https://www.cnblogs.com/xybaby/p/10124083.html
+
+https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md#6-%E9%9B%86%E7%BE%A4%E6%88%90%E5%91%98%E5%8F%98%E5%8C%96
+https://www.google.com.hk/search?newwindow=1&safe=strict&rlz=1C5CHFA_enCN915CN915&q=raft%E5%8F%AF%E8%A7%86%E5%8C%96&sa=X&ved=2ahUKEwjn-N3ojZbvAhVay4sBHfjhAacQ1QIwFnoECCEQAQ&biw=1164&bih=655
+Raft：一种易于理解的共识算法
+http://thesecretlivesofdata.com/raft/
+https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md#6-%E9%9B%86%E7%BE%A4%E6%88%90%E5%91%98%E5%8F%98%E5%8C%96
