@@ -9,3 +9,10 @@ yarn.lock
 __pycache__/
 .pytest_cache
 .DS_Store
+
+cmake-build-debug
+target/
+yarn-error.log
+web-ext-artifacts
+book/
+src/gen

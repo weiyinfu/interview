@@ -4,3 +4,4 @@ language = "en"
 multilingual = false
 src = "src"
 title = "面试"
+deploy_name = 'interview'
